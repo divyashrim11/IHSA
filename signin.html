@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         background-image: url('assets/images/backgroundSignup.png');
+         background-size: cover;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         }
+         .container {
+         background-color: rgba(255, 255, 255, 0.8);
+         padding: 20px;
+         border-radius: 10px;
+         width: 400px;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+         }
+         .container h1 {
+         text-align: center;
+         }
+         .container p {
+         text-align: center;
+         }
+         input[type=text], input[type=password] {
+         width: 100%;
+         padding: 12px 20px;
+         margin: 8px 0;
+         display: inline-block;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         }
+         button {
+         background-color: #008CBA;
+         color: white;
+         padding: 14px 20px;
+         margin: 8px 4px;
+         border: none;
+         cursor: pointer;
+         width: 48%;
+         opacity: 0.9;
+         border-radius: 12px; /* Added border-radius */
+         }
+         button:hover {
+         opacity: 1;
+         }
+         .cancelbtn {
+         background-color: #f44336;
+         }
+         .cancelbtn, .signin {
+         float: left;
+         }
+         .container {
+         padding: 16px;
+         }
+         .clearfix::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         @media screen and (max-width: 300px) {
+         button {
+         width: 100%;
+         }
+         }
+         
+      </style>
+      <script>
+        function validateForm() {
+             var email = document.getElementsByName("uname")[0].value;
+             var password = document.getElementsByName("psw")[0].value;
+             var errorText = document.getElementById("errorText");
+
+             if (email == "" || password == "") {
+                 errorText.innerHTML = "Email and Password are mandatory fields.";
+                 return false;
+             }
+
+             // Add your own logic for checking the password here
+             if (password !== "correctpassword") {
+                 errorText.innerHTML = "Incorrect email or password.";
+                 return false;
+             }
+
+             // If all validations pass, the form will be submitted
+             return true;
+         }
+      </script>
+   </head>
+   <body>
+    <div class="container">
+      <h1>User Login</h1>
+      <form action="/action_page.php" method="post" onsubmit="return validateForm()">
+         <label for="email"><b>E-mail</b></label>
+         <input type="text" placeholder="Enter e-mail" name="uname" required><br>
+         <label for="psw"><b>Password</b></label>
+         <input type="password" placeholder="Enter Password" name="psw" required><br>
+         <label>
+         <input type="checkbox" name="remember"> Remember me
+         </label><br>
+         <div class="clearfix">
+           <button type="submit" class="signin">Login</button>
+           <button type="button" class="cancelbtn">Cancel</button>
+         </div>
+         <p id="errorText" style="color: red;"></p>
+      </form>
+      <br>
+      <div style="text-align: center;">
+         <span class="psw">Forgot password? <a href="resetPassword.html">Reset it here</a></span>
+      </div>
+      <br>
+      <div style="text-align: center;">
+         <p>New user? <a href="signup.html">Sign up here</a></p>
+      </div>
+   </body>
+</html>

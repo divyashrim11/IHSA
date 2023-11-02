@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('assets/images/backgroundAppForms1.png');
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    overflow: hidden; /* Added to fix overflow issue */
+}
+
+.form-section {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"],
+.form-section input[type="date"],
+.form-section select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-section input[type="submit"],
+.form-section input[type="button"] {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Added styling for radio and checkbox */
+.form-section input[type="radio"],
+.form-section input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Added media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .form-section input[type="text"],
+    .form-section input[type="password"],
+    .form-section input[type="date"],
+    .form-section select {
+        width: 100%;
+    }
+}
+.btn-success {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+         }
+
+         .btn-success:hover {
+            background-color: #4cae4c;
+         }
+
+         .btn-danger {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+         }
+
+         .btn-danger:hover {
+            background-color: #c9302c;
+         }
+
+      </style>
+   </head>
+   <body>
+    <br>
+    <br>
+      <div class="container">
+         <h1>IHSA New Team Application</h1>
+         <div class="form-section">
+            <label for="zone">Zone:</label>
+            <select class="form-control required" data-val="true" data-val-number="The field ZoneId must be a number." data-val-required="The ZoneId field is required." id="ZoneId" name="ZoneId">
+                <option value="">--Select One--</option>
+                <option value="1">Zone 1</option>
+                <option value="2">Zone 2</option>
+                <option value="3">Zone 3</option>
+                <option value="4">Zone 4</option>
+                <option value="5">Zone 5</option>
+                <option value="6">Zone 6</option>
+                <option value="7">Zone 7</option>
+                <option value="8">Zone 8</option>
+            </select>
+        </div>        
+        <div class="form-section">
+            <label for="RegionId">Region:</label>
+            <select class="form-control required" data-val="true" data-val-number="The field RegionId must be a number." data-val-required="The RegionId field is required." id="RegionId" name="RegionId">
+               <option value="">--Select One--</option>
+               <option value="32">Zone 1-Region 1</option>
+               <option value="33">Zone 1-Region 2</option>
+               <option value="34">Zone 1-Region 3</option>
+               <option value="35">Zone 1-Region 4</option>
+               <option value="75">Zone 1-Region 5</option>
+               <option value="36">Zone 2-Region 1</option>
+               <option value="37">Zone 2-Region 2</option>
+               <option value="38">Zone 2-Region 3</option>
+               <option value="62">Zone 2-Region 4</option>
+               <option value="64">Zone 2-Region 5</option>
+               <option value="39">Zone 3-Region 1</option>
+               <option value="41">Zone 3-Region 3</option>
+               <option value="42">Zone 3-Region 4</option>
+               <option value="73">Zone 3-Region 5</option>
+               <option value="43">Zone 4-Region 1</option>
+               <option value="44">Zone 4-Region 2</option>
+               <option value="45">Zone 4-Region 3</option>
+               <option value="65">Zone 4-Region 4</option>
+               <option value="74">Zone 4-Region 5</option>
+               <option value="46">Zone 5-Region 1</option>
+               <option value="47">Zone 5-Region 2</option>
+               <option value="48">Zone 5-Region 3</option>
+               <option value="66">Zone 5-Region 4</option>
+               <option value="72">Zone 5-Region 5</option>
+               <option value="49">Zone 6-Region 1</option>
+               <option value="50">Zone 6-Region 2</option>
+               <option value="51">Zone 6-Region 3</option>
+               <option value="63">Zone 6-Region 4</option>
+               <option value="67">Zone 6-Region 5</option>
+               <option value="52">Zone 7-Region 1</option>
+               <option value="53">Zone 7-Region 2</option>
+               <option value="68">Zone 7-Region 3</option>
+               <option value="69">Zone 7-Region 4</option>
+               <option value="70">Zone 7-Region 5</option>
+               <option value="54">Zone 8-Region 1</option>
+               <option value="55">Zone 8-Region 2</option>
+               <option value="56">Zone 8-Region 3</option>
+               <option value="57">Zone 8-Region 4</option>
+               <option value="71">Zone 8-Region 5</option>
+            </select>
+            <span class="field-validation-valid text-danger" data-valmsg-for="RegionId" data-valmsg-replace="true"></span>
+         </div>
+        
+         <div class="form-section">
+            <label for="WesternRegionId">Western Region</label>
+            <select class="form-control required" id="WesternRegionId" name="WesternRegionId">
+                <option value="">--Select One--</option>
+                <option value="10">10</option>
+                <option value="7">21</option>
+                <option value="4">22</option>
+                <option value="24">23</option>
+                <option value="21">25</option>
+                <option value="3">30</option>
+                <option value="8">40</option>
+                <option value="11">50</option>
+                <option value="2">51</option>
+                <option value="6">52</option>
+                <option value="12">61</option>
+                <option value="18">62</option>
+                <option value="20">63</option>
+                <option value="9">64</option>
+                <option value="14">70</option>
+                <option value="1">72</option>
+                <option value="13">73</option>
+                <option value="22">74</option>
+                <option value="23">75</option>
+                <option value="17">81</option>
+                <option value="19">82</option>
+                <option value="16">83</option>
+                <option value="5">84</option>
+                <option value="15">85</option>
+            </select>
+        </div>
+        
+         <h3>Hint: Try to match zone and region number with western region</h3>
+         <h3>Example : Zone 7 Region 4 would be Western Region 74</h3>
+         <div class="form-section">
+            <label for="universityName">University Name:</label>
+            <input type="text" id="universityName" name="universityName" required>
+         </div>
+         <div class="form-section">
+            <label for="universityName">University Name:</label>
+            <input type="text" id="universityName" name="universityName" required>
+        </div>
+        <div class="form-section">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-section">
+            <label for="State">State/Prov</label>
+            <select class="form-control Required" data-val="true" data-val-required="The State field is required." id="State" name="State">
+                <option value="">--Select One--</option>
+                <option value="AB">Alberta</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="BC">British Columbia</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">Washington, D.C.</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MB">Manitoba</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NM">New Mexico</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="ON">Ontario</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QC">Quebec</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+                <option value="YT">Yukon</option>
+            </select>
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="Country">Country</label>
+            <select class="form-control Required" data-val="true" data-val-required="The Country field is required." id="Country" name="Country">
+                <option value="">--Select One--</option>
+                <option value="USA">United States</option>
+            </select>
+            
+        </div>
+        
+        <div class="form-section">
+            <label for="teamEmail">Team Email Address:</label>
+            <input type="text" id="teamEmail" name="teamEmail" required>
+        </div>
+        <div class="form-section">
+            <select name="DepartmentAffiliation" class="form-control">
+                <option selected="selected" value="0">Select Department Affiliation</option>
+                <option value="Athletic department">Athletic Department</option>
+                <option value="Student government">Student Government</option>
+                <option value="Club sport">Club Sport</option>
+                <option value="Academic department">Academic Department</option>
+                <option value="Other">Other</option>
+            </select>            
+        </div>
+        <select class="form-control" name="AthleticDesignation">
+            <option selected="selected" value="0">Select Athletic Designation</option>
+            <option value="NCAA Division 1">NCAA Division 1</option>
+            <option value="NCAA Division 2">NCAA Division 2</option>
+            <option value="NCAA Division 3">NCAA Division 3</option>
+            <option value="NAIA">NAIA</option>
+            <option value="NJCAA">NJCAA</option>
+            <option value="Other">Other</option>
+        </select>
+        
+      </div>
+        <br>
+        <br>
+         <!-- IHSA Teams -->
+         <div class="container">
+         <h2>IHSA Teams</h2>
+         <h3>Let's spread the word! Student achievement deserves recognition. In order to expand IHSA awareness among our academic communities, we have revised the team application to include recommendations for key resources to contact regarding athletic and student news and updates. This information will be used solely to broaden understanding of the IHSA and its activities within our membership.</h3>
+         <h3>Please help us get a leg up in promoting IHSA by providing the name of at least one contact person from your university or college as prompted by the team application. Thank you for your participation!</h3>
+         </div>
+         <br>
+         <br>
+         <div class="container">
+         <!-- Coach Information -->
+         <h2>Coach Information</h2>
+         <div class="form-section">
+            <label for="coachFirstName">First Name:</label>
+            <input type="text" id="coachFirstName" name="coachFirstName" required>
+         </div>
+         <div class="form-section">
+            <label for="coachMiddleName">Middle Name:</label>
+            <input type="text" id="coachMiddleName" name="coachMiddleName">
+         </div>
+         <div class="form-section">
+            <label for="coachLastName">Last Name:</label>
+            <input type="text" id="coachLastName" name="coachLastName" required>
+         </div>
+         <div class="form-section">
+            <label for="coachPermanentAddress">Permanent Address:</label>
+            <input type="text" id="coachPermanentAddress" name="coachPermanentAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="coachCity">City:</label>
+            <input type="text" id="coachCity" name="coachCity" required>
+         </div>
+         <div class="form-section">
+            <label for="coachState">State/Province:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The State field is required." id="coachState" name="coachState">
+                <option value="">--Select One--</option>
+                <option value="AB">Alberta</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="BC">British Columbia</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">Washington, D.C.</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MB">Manitoba</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NM">New Mexico</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="ON">Ontario</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QC">Quebec</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+                <option value="YT">Yukon</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="coachCountry">Country:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The Country field is required." id="coachCountry" name="coachCountry">
+                <option value="">--Select One--</option>
+                <option value="USA">United States</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="coachZipCode">Zip Code/Postal Code:</label>
+            <input type="text" id="coachZipCode" name="coachZipCode" required>
+         </div>
+         <div class="form-section">
+            <label for="coachPhoneNumber">Phone Number:</label>
+            <input type="text" id="coachPhoneNumber" name="coachPhoneNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="coachCellNumber">Cell Number:</label>
+            <input type="text" id="coachCellNumber" name="coachCellNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="coachBirthDate">Birth Date:</label>
+            <input type="date" id="coachBirthDate" name="coachBirthDate" required>
+         </div>
+         <div class="form-section">
+            <label for="ushjaAccountNumber">USHJA Account Number (required for Hunter Seat):</label>
+            <input type="text" id="ushjaAccountNumber" name="ushjaAccountNumber">
+         </div>
+         <div class="form-section">
+            <label>Is the coach a college or university employee, paid directly by the school?:</label><br>
+            <input type="radio" id="yes" name="employeeStatus" value="Yes" required>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="employeeStatus" value="No" required>
+            <label for="no">No</label><br>
+         </div>
+         <div class="form-section">
+            <label>Does the coach have a prior IHSA account (either as a rider, alumni, coach, etc.)? If So, please check the yes box below:</label><br>
+            <input type="checkbox" id="priorIHSAAccount" name="priorIHSAAccount">
+         </div>
+         <h3>Enter the coach's email address below. If the coach has an IHSA account, please use the email address associated with the account</h3>
+         <div class="form-section">
+            <label for="coachEmailAddress">Email Address:</label>
+            <input type="text" id="coachEmailAddress" name="coachEmailAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="coachUsername">Enter Coach Username:</label>
+            <input type="text" id="coachUsername" name="coachUsername" required>
+         </div>
+         <div class="form-section">
+            <label for="coachPassword">Enter Coach Password:</label>
+            <input type="password" id="coachPassword" name="coachPassword" required>
+         </div>
+         </div>
+         <br>
+         <br>
+         <!-- Athletic Director Information -->
+         <div class="container">
+         <h2>Athletic Director Information</h2>
+         <div class="form-section">
+            <label for="adFirstName">First Name:</label>
+            <input type="text" id="adFirstName" name="adFirstName" required>
+         </div>
+         <div class="form-section">
+            <label for="adMiddleName">Middle Name:</label>
+            <input type="text" id="adMiddleName" name="adMiddleName">
+         </div>
+         <div class="form-section">
+            <label for="adLastName">Last Name:</label>
+            <input type="text" id="adLastName" name="adLastName" required>
+         </div>
+         <div class="form-section">
+            <label for="adPermanentAddress">Permanent Address:</label>
+            <input type="text" id="adPermanentAddress" name="adPermanentAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="adCity">City:</label>
+            <input type="text" id="adCity" name="adCity" required>
+         </div>
+         <div class="form-section">
+            <label for="adState">State/Province:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The State field is required." id="adState" name="adState">
+                <option value="">--Select One--</option>
+                <option value="AB">Alberta</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="BC">British Columbia</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">Washington, D.C.</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MB">Manitoba</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NM">New Mexico</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="ON">Ontario</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QC">Quebec</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+                <option value="YT">Yukon</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="adCountry">Country:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The Country field is required." id="adCountry" name="adCountry">
+                <option value="">--Select One--</option>
+                <option value="USA">United States</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="adZipCode">Zip Code/Postal Code:</label>
+            <input type="text" id="adZipCode" name="adZipCode" required>
+         </div>
+         <div class="form-section">
+            <label for="adPhoneNumber">Phone Number:</label>
+            <input type="text" id="adPhoneNumber" name="adPhoneNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="adCellNumber">Cell Number:</label>
+            <input type="text" id="adCellNumber" name="adCellNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="adFaxNumber">Fax Number:</label>
+            <input type="text" id="adFaxNumber" name="adFaxNumber">
+         </div>
+         <div class="form-section">
+            <label for="adEmailAddress">Email Address:</label>
+            <input type="text" id="adEmailAddress" name="adEmailAddress" required>
+         </div>
+         </div>
+         <br>
+         <br>
+         <!-- School Representative Information -->
+         <div class="container">
+         <h2>School Representative Information</h2>
+         <div class="form-section">
+            <label for="srFirstName">First Name:</label>
+            <input type="text" id="srFirstName" name="srFirstName" required>
+         </div>
+         <div class="form-section">
+            <label for="srMiddleName">Middle Name:</label>
+            <input type="text" id="srMiddleName" name="srMiddleName">
+         </div>
+         <div class="form-section">
+            <label for="srLastName">Last Name:</label>
+            <input type="text" id="srLastName" name="srLastName" required>
+         </div>
+         <div class="form-section">
+            <label for="srPermanentAddress">Permanent Address:</label>
+            <input type="text" id="srPermanentAddress" name="srPermanentAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="srCity">City:</label>
+            <input type="text" id="srCity" name="srCity" required>
+         </div>
+         <div class="form-section">
+            <label for="srState">State/Province:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The State field is required." id="srState" name="srState">
+                <option value="">--Select One--</option>
+                <option value="AB">Alberta</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="BC">British Columbia</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">Washington, D.C.</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MB">Manitoba</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NM">New Mexico</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="ON">Ontario</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QC">Quebec</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+                <option value="YT">Yukon</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="srCountry">Country:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The Country field is required." id="srCountry" name="srCountry">
+                <option value="">--Select One--</option>
+                <option value="USA">United States</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="srZipCode">Zip Code/Postal Code:</label>
+            <input type="text" id="srZipCode" name="srZipCode" required>
+         </div>
+         <div class="form-section">
+            <label for="srPhoneNumber">Phone Number:</label>
+            <input type="text" id="srPhoneNumber" name="srPhoneNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="srCellNumber">Cell Number:</label>
+            <input type="text" id="srCellNumber" name="srCellNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="srFaxNumber">Fax Number:</label>
+            <input type="text" id="srFaxNumber" name="srFaxNumber">
+         </div>
+         <div class="form-section">
+            <label for="srEmailAddress">Email Address:</label>
+            <input type="text" id="srEmailAddress" name="srEmailAddress" required>
+         </div>
+         </div>
+         <br>
+         <br>
+         <!-- School Correspondence Information -->
+         <div class="container">
+         <h2>School Correspondence Information</h2>
+         <div class="form-section">
+            <label for="scFirstName">First Name:</label>
+            <input type="text" id="scFirstName" name="scFirstName" required>
+         </div>
+         <div class="form-section">
+            <label for="scMiddleName">Middle Name:</label>
+            <input type="text" id="scMiddleName" name="scMiddleName">
+         </div>
+         <div class="form-section">
+            <label for="scLastName">Last Name:</label>
+            <input type="text" id="scLastName" name="scLastName" required>
+         </div>
+         <div class="form-section">
+            <label for="scPermanentAddress">Permanent Address:</label>
+            <input type="text" id="scPermanentAddress" name="scPermanentAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="scCity">City:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The State field is required." id="scState" name="scState">
+                <option value="">--Select One--</option>
+                <option value="AB">Alberta</option>
+                <option value="AK">Alaska</option>
+                <option value="AL">Alabama</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="BC">British Columbia</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">Washington, D.C.</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="IA">Iowa</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MB">Manitoba</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MS">Mississippi</option>
+                <option value="MT">Montana</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NM">New Mexico</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="ON">Ontario</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QC">Quebec</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+                <option value="YT">Yukon</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="scState">State/Province:</label>
+            <input type="text" id="scState" name="scState" required>
+         </div>
+         <div class="form-section">
+            <label for="scCountry">Country:</label>
+            <select class="form-control Required" data-val="true" data-val-required="The Country field is required." id="scCountry" name="scCountry">
+                <option value="">--Select One--</option>
+                <option value="USA">United States</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="scZipCode">Zip Code/Postal Code:</label>
+            <input type="text" id="scZipCode" name="scZipCode" required>
+         </div>
+         <div class="form-section">
+            <label for="scPhoneNumber">Phone Number:</label>
+            <input type="text" id="scPhoneNumber" name="scPhoneNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="scCellNumber">Cell Number:</label>
+            <input type="text" id="scCellNumber" name="scCellNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="scFaxNumber">Fax Number:</label>
+            <input type="text" id="scFaxNumber" name="scFaxNumber">
+         </div>
+         <div class="form-section">
+            <label for="scEmailAddress">Email Address:</label>
+            <input type="text" id="scEmailAddress" name="scEmailAddress" required>
+         </div>
+         </div>
+         <br>
+         <br>
+         <!-- Submit and Cancel Buttons -->
+      </div>
+      <div style="text-align: center;">
+        <form action="riderAppDetails.html" method="post" style="display: inline-block;">
+           <button type="submit" class="btn-success">Submit Application</button>
+        </form>
+        <button type="button" class="btn-danger" id="resetForm" style="display: inline-block;">Cancel</button>
+     </div>
+     <br>
+     <br>
+      <script>
+         document.getElementById('resetForm').addEventListener('click', function() {
+             var inputs = document.querySelectorAll('input[type="text"], input[type="password"], input[type="date"]');
+             inputs.forEach(function(input) {
+                 input.value = '';
+             });
+         });
+      </script>
+   </body>
+</html>

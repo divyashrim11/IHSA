@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         background-image: url('assets/images/backgroundAppForms.png');
+         background-size: cover;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         }
+         .container h1 {
+         text-align: center;
+         }
+         .container p {
+         text-align: center;
+         }
+         .pod {
+    background-color: rgba(249, 249, 249, 0); /* Increased transparency */
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    flex: 0 0 calc(30% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.pod:last-child {
+    margin-right: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+         h2 {
+         color: #008CBA;
+         }
+         .menu-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    left: 100%;
+    top: 0;
+}
+
+.menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #ddd;
+}
+
+.menu-container:hover .menu {
+    display: block;
+}
+
+
+/* Add rest of your existing styles */
+
+      </style>
+   </head>
+   <body>
+    <div class="menu-container">
+        <div class="menu-icon">&#9776;</div>
+        <ul class="menu">
+           <li onclick="redirectToProfileSettings()">Profile Settings</li>
+           <li onclick="resetPassword()">Reset Password</li>
+           <li onclick="signOut()">Sign Out</li>
+        </ul>
+     </div>
+      <div class="container">
+         <h1>Welcome!</h1>
+         <p>Please choose your role:</p>
+         <div class="pods-container">
+            <div class="pod" onclick="redirectToNewPage('new_rider.html')">
+               <h2>New Rider</h2>
+               <p>IHSA New Rider Application</p>
+            </div>
+            <div class="pod" onclick="redirectToNewPage('new_team.html')">
+               <h2>New Team</h2>
+               <p>IHSA New Team Application</p>
+            </div>
+            <div class="pod" onclick="redirectToNewPage('new_coach.html')">
+               <h2>New Coach</h2>
+               <p>IHSA Coach Application</p>
+            </div>
+            <div class="pod" onclick="redirectToNewPage('admin.html')">
+                <h2>Admin</h2>
+                <p>IHSA Admin</p>
+             </div>
+         </div>
+      </div>
+      <script>
+         function redirectToNewPage(page) {
+             window.location.href = page;
+         }
+      </script>
+   </body>
+</html>

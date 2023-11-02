@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('assets/images/backgroundAppForms1.png');
+            background-size: cover;
+            margin: 0;
+         }
+
+         .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: auto;
+         }
+
+         h1 {
+            color: #008CBA;
+         }
+
+         .form-section {
+            text-align: left;
+            margin-bottom: 20px;
+         }
+
+         .form-section label {
+            font-weight: bold;
+            display: block;
+         }
+
+         .form-section select,
+         .form-section input[type="text"],
+         .form-section input[type="password"],
+         .form-section input[type="date"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+         }
+
+         .form-section input[type="submit"],
+         .form-section input[type="button"] {
+            font-size: 16px;
+            margin-top: 10px;
+         }
+
+         .btn-success {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+         }
+
+         .btn-success:hover {
+            background-color: #4cae4c;
+         }
+
+         .btn-danger {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+         }
+
+         .btn-danger:hover {
+            background-color: #c9302c;
+         }
+      </style>
+   </head>
+   <body>
+      <br>
+      <br>
+      <div class="container">
+         <h3>IHSA New Rider Application</h3>
+         <h5>Enter your desired membership type and select the team you wish to be a part of for the new season.</h5>
+         <h5>If you are a Rider Coach for a new team, your team and coach account needs to be approved first by the Region President. Once this has been done, you may set up your new rider account.</h5>
+         <div class="form-section">
+            <label for="membershipType">Membership Type*</label>
+            <select id="membershipType" name="membershipType" required>
+               <option value="selectOne">Select One</option>
+               <option value="hunterSeat">Hunter Seat</option>
+               <option value="western">Western</option>
+               <option value="combined">Combined</option>
+            </select>
+         </div>
+         <div class="form-section">
+            <label for="selectTeam">Select Your Team*</label>
+            <select id="selectTeam" name="selectTeam" required>
+               <option value="selectOne">Select One</option>
+               <!-- Add options for teams here -->
+               <option value="38880cde-214e-4d4a-84f8-988eeb792ea7">Acadia University, NS</option>
+<option value="a66c118d-c435-4efc-9b9f-864bdc52ff03">Adelphi  University, NY</option>
+<option value="a2250dee-b504-41d5-a1ea-17d12d11bd41">Adrian College, MI</option>
+<option value="ac0cd40c-093d-4be2-8aef-bd30a35ff479">Albertson College of Idaho, ID</option>
+<option value="76c54c93-c8d6-48fc-8ee8-54a1fbe6beee">Albion College, MI</option>
+<option value="ed9613d9-2e11-4453-9b92-54ab974f3d14">Alfred State College, NY</option>
+<option value="bceb30ab-7cbf-4960-b7c6-8759273dd3ae">Alfred University, NY</option>
+<option value="780ca0a3-6357-480c-ba85-a520e8cc8b2c">Allegheny College, PA</option>
+<option value="05c20bff-734d-40a6-add2-82fc956dd839">Alma College, MI</option>
+<option value="bd844c79-1d50-41c3-9eda-699dd01d6337">Alvernia University, PA</option>
+<option value="4a141aaa-55b8-4856-a0ec-9df1fdd8cc82">American University, DC</option>
+<option value="e2e8fcd1-7f1d-4cb0-84d9-144a862ce63c">Amherst College, MA</option>
+<option value="58e6b949-af59-4b1b-88b3-6aaf8a692f8d">Anderson University, SC</option>
+<option value="fb38d77d-7a2e-4bd1-b249-1a45a50e869b">Anna Maria College, MA</option>
+<option value="13450150-4f31-4b13-86ab-7fc11b0214a3">Appalachian State University, NC</option>
+<option value="5121058c-3266-4043-b333-fd8f8916f97f">Arcadia University, PA</option>
+<option value="38f64b13-7080-446f-a7e9-fa632cb8ad0e">Arizona State University, AZ</option>
+<option value="69780ac0-513e-4e52-997a-7bbeb3671c7b">Arkansas State University, AR</option>
+<option value="c312b003-6342-4957-9e80-f634662c3241">Assumption College, MA</option>
+<option value="e6e5aebc-e75c-43fc-bb87-682b4e21dddf">Auburn University, AL</option>
+<option value="c557d74a-d9e1-4372-916d-9192433105bb">Augusta State University, GA</option>
+<option value="7234388e-e25b-44be-8bf9-98047ef8073e">Augustana College, IL</option>
+<option value="541d59a5-f0ef-4cf7-bdf2-fbcc65f48f20">Austin Peay State University, TN</option>
+<option value="46a09bb3-03a0-4a7f-a5b9-aa81c4e544be">Ave Maria University, FL</option>
+<option value="e4ba6772-8c33-4bca-b286-1a3cb824c0d0">Averett University, VA</option>
+<option value="3bc622c4-8b3c-4198-8bf2-86cd4529bf55">Babson College, MA</option>
+<option value="e4fe56ed-cfac-4a8f-9667-b721ebb46eeb">Ball State University, IN</option>
+<option value="e07c4a2b-debb-4055-9408-e3887e465087">Bard College, NY</option>
+<option value="ab15b846-88cd-402e-94cc-2dd18624ad07">Bates College, ME</option>
+<option value="78d53348-676f-4fc4-8d0b-264af0b2bb7a">Baylor University, TX</option>
+<option value="d90b86ac-e46d-4da9-9262-0ff582ac8353">Becker College, MA</option>
+<option value="43f22a27-ae2b-4c87-8a45-f6ec0f84fe07">Belmont University, TN</option>
+<option value="2d086ef5-4359-48a3-93a0-9f90c6348b8d">Bennington College, VT</option>
+<option value="371d0acb-d72a-466b-898d-ed731aefcde4">Bentley University, MA</option>
+<option value="92de05af-a102-4176-a211-4e053be1f396">Berry College, GA</option>
+<option value="5273552b-7673-419d-9136-28eb34b5077c">Bethany College, WV</option>
+<option value="5d131f92-2e17-4000-935f-10b9c0510107">Bethany Lutheran College, MN</option>
+<option value="af846d00-f222-461e-bac1-b1fa77ec04aa">Binghamton University, NY</option>
+<option value="a3dd48a9-99ff-4f34-b54b-d36855acbfe6">Black Hawk College, IL</option>
+<option value="e7649bd3-9b10-4ee1-a5d0-3c30392a813b">Bloomsburg University, PA</option>
+<option value="5be8bc3c-8755-4ef5-9181-d8faf6fe8053">Boston College, MA</option>
+<option value="9c23ffc5-90c8-4b7d-a21b-96fbb93fa12e">Boston University, MA</option>
+<option value="43afe489-aa51-4af2-9d78-b5d97280214a">Bowdoin College, ME</option>
+<option value="f0eb956a-4614-4283-8dce-5eb781409dac">Bowling Green State University, OH</option>
+<option value="7cd3e1f2-26d2-459b-8ebe-a668bc960010">Bradley University, IL</option>
+<option value="3eaadc80-898e-4775-bf79-05f283d0be10">Brandeis University, MA</option>
+<option value="d8fca8e3-faf8-40c6-8999-601ab80e92fa">Bridgewater College, VA</option>
+<option value="e2ad7bfa-03ac-4896-8c5c-71c9b636a8ae">Bridgewater State University, MA</option>
+<option value="ffe1dbf5-fba6-4391-9dc6-a822a0da74fb">Brock University, ON</option>
+<option value="01a1eee0-1fce-4d3b-be68-b1d8fb64bb6d">Brockport College, NY</option>
+<option value="ce854914-e3b5-4ee4-9310-e562d41cf79e">Brown University, RI</option>
+<option value="2ddb7dbc-7ec0-4839-9eae-7dca87d10177">Bucknell University, PA</option>
+<option value="548b345a-cd87-4492-96f0-46db657be707">Bucks County Community College, PA</option>
+<option value="16f369f5-1fe5-4577-9a5e-a5710664e1d2">Burlington County College, NJ</option>
+<option value="7e5513ce-5c39-4f8d-a600-c099b1ac93b6">Butler University, IN</option>
+<option value="741bedb8-a142-4221-80d1-c06a162b5237">Cal Poly State University, San Luis Obispo, CA</option>
+<option value="3bf86f54-a3d3-4737-8527-b0ad9e7f1aea">California State Polytechnic University Pomona, CA</option>
+<option value="35b47a57-8d27-49f2-aee5-deddf2602d96">California State University Fresno, CA</option>
+<option value="ec5d3e51-1f57-49c2-a133-75c62817968d">California State University, Fullerton, CA</option>
+<option value="58dd3737-bb34-45db-9ae2-5881c7e99f83">California State University, Monterey Bay, CA</option>
+<option value="9bf1b8e8-a77f-46fd-8894-9db245519e6c">Calvin University, MI</option>
+<option value="66cda097-f1b5-43a5-b268-04e99d9f6330">Camosun College, BC</option>
+<option value="84bb5ee5-ba26-42fb-b624-07e1b8bab0bf">Campbell University, NC</option>
+<option value="d753cf4b-c126-4367-978e-a76e6f5fbc04">Canisius College, NY</option>
+<option value="ea166ccf-225f-487e-a052-e69fc4d997ef">Carleton College, MN</option>
+<option value="940dd24a-8d7a-4698-af69-0e90ea685440">Carleton University, ON</option>
+<option value="a696c746-f1ea-4afd-a6bf-243b01887650">Carroll College, MT</option>
+<option value="2912de58-61cd-4efd-b4c9-2954adee9d3e">Case Western Reserve University, OH</option>
+<option value="35609268-d9ca-4d56-805c-682ddc653758">Catholic University of America, DC</option>
+<option value="b6ef4ff1-f5a1-42f8-a5a4-6c3b860e2f68">Cazenovia College, NY</option>
+<option value="2c1991a3-2b3a-487a-915b-c336f59d341f">Cedar Crest College, PA</option>
+<option value="abb85ff2-023f-442e-a17e-b09386bc6584">Centenary University, NJ</option>
+<option value="070c7891-133b-4362-98a0-d124d379eb63">Central Connecticut State University, CT</option>
+<option value="1e502fcc-0192-44e8-8531-c80155e8e449">Central Michigan University, MI</option>
+<option value="2b1773eb-3097-4363-a654-5091d594eb3a">Central Washington University, WA</option>
+<option value="13479966-c2b0-4884-ab0b-96eafb14a233">Chapman University, CA</option>
+<option value="7a8272a6-5497-4a68-94f8-554fc8eeb489">Chestnut Hill College, PA</option>
+<option value="62a4502e-16ab-446b-83bd-9bd76432fb82">Christopher Newport University, VA</option>
+<option value="2e2e494e-1bab-4e4b-96ad-61b3d619673f">Claremont Colleges, CA</option>
+<option value="a2af5ec5-5cab-44b1-80fb-774dcb68b9cd">Clarion University Venango Campus, PA</option>
+<option value="91ac9944-5ca9-4a29-971b-43e8f2a68edd">Clark University, MA</option>
+<option value="89be8390-194a-416f-b730-994b5a593f0d">Clarkson University, NY</option>
+<option value="db4fcfb2-c1d8-4d3e-89ba-43e66d3ed61c">Clemson University, SC</option>
+<option value="c5c1f290-5423-465a-9af5-5cdc88e7503e">Cloud Community College, KS</option>
+<option value="32dfe0f2-b948-4a46-bfe7-ba523981366f">Coastal Carolina University, SC</option>
+<option value="1f5b5160-6d54-4a64-905a-57dc1f67a27c">Colby College, ME</option>
+<option value="5a44fe11-1c70-42a5-ab8b-11107b5a06fe">Colby Community College, KS</option>
+<option value="87f8e4b1-de61-491b-8e52-f08071354ca5">Colby Sawyer College, NH</option>
+<option value="16d03367-b6e4-4405-8983-047f3a5fa22c">Colgate University, NY</option>
+<option value="42afd2e7-0fe0-49b2-9450-959d94d9dcc4">College for Creative Studies, MI</option>
+<option value="2a87028f-72c9-4cd3-8229-4fc608dc1301">College of Central Florida, FL</option>
+<option value="41268c22-9db2-4c0c-8259-43502d93f954">College of Charleston, SC</option>
+<option value="7761bc93-0bc8-41a1-a556-810bfe5361ff">College Of Saint Elizabeth, NJ</option>
+<option value="6b2c58c7-37f0-4ba6-9257-df50664d0dda">College of Southern Idaho, ID</option>
+<option value="71f40f27-dcf9-4ca8-922e-b4c0884169cd">College of the Holy Cross, MA</option>
+<option value="96d8c49b-6920-45f4-bb30-6728388be9ff">College of the Sequoias, CA</option>
+<option value="d00cbf5a-eb36-4733-9091-99346e3abe24">College Of William And Mary, VA</option>
+<option value="1a521694-799b-430f-8c82-ff3cdf307141">College Of Wooster, OH</option>
+<option value="8814bc1a-d512-40bc-81c6-cc9373fbfa6e">Colorado Academy of Veterinary Technology, CO</option>
+<option value="72b392f8-861b-41d5-89c1-d45e7ab7e239">Colorado College, CO</option>
+<option value="2de4688d-329e-4671-a155-79d89fabd8fb">Colorado Northwestern Community College, CO</option>
+<option value="853e9f5a-9d85-4ea3-97e8-8beb2d73677f">Colorado School of Mines, CO</option>
+<option value="898acda7-e641-4012-9d7d-908a9daa7a7a">Colorado State University, CO</option>
+<option value="f328cdcf-2c5c-4243-b79e-a5d70844f22d">Columbia University, NY</option>
+<option value="8062ee1e-3717-473d-b75d-07a3aeacd0ae">Community College of Beaver County, PA</option>
+<option value="6c7b056c-2ed5-47ef-a348-69d76fba2645">Connecticut College, CT</option>
+<option value="f2960d76-e9cb-4199-8643-186d94e6bafd">Converse College, SC</option>
+<option value="9e57c59e-29f2-4fc0-b6a2-a701e6e4f1ee">Cornell University, NY</option>
+<option value="1659e950-c52e-4575-ac3c-6bdd6715dc44">Curry College, MA</option>
+<option value="ac5af9e4-fac3-4129-99ca-d76f0adf4221">Dartmouth College, NH</option>
+<option value="a7072b70-91cf-4b61-999a-0f95bf1df7ff">Davidson College, NC</option>
+<option value="744ce4cd-e0e8-4399-9bdb-73224d7cfef5">Delaware Valley University, PA</option>
+<option value="9b729841-ebd5-4fb2-a18c-92860106cc73">Denison University, OH</option>
+<option value="1968d492-3063-4834-b401-440fec3f6216">DePauw University, IN</option>
+<option value="db650188-a52b-4e28-a2e7-354cb42afbca">DeSales University, PA</option>
+<option value="403f22f1-da51-4968-915a-b92e7fc342d2">Dickinson College, PA</option>
+<option value="86fdf658-6ec8-4843-904b-efce74d0d461">Doane College, NE</option>
+<option value="e394e5c3-f175-4673-a60c-2f1e3d2d7e0a">Dodge City Community College, KS</option>
+<option value="df571c26-1b2b-4295-ab07-bb3bd0239155">Douglas College, BC</option>
+<option value="3c720c86-f26c-4025-8e09-5fdbd234fac5">Dowling College, NY</option>
+<option value="43c59ae5-f169-4b31-8c81-65835f25dc38">Drake University, IA</option>
+<option value="1ffa2d88-d066-427e-a14c-24e8b2ddcb23">Drew University, NJ</option>
+<option value="114aa807-2fdb-425c-a538-6f4203c65501">Drexel University, PA</option>
+<option value="04999b2c-ac17-42ff-b0d5-f8c116fefd0a">Duke University, NC</option>
+<option value="cd8b71ec-6016-4327-bf8d-5f4d0841a818">Duquesne University, PA</option>
+<option value="e06549f5-3683-4dbf-81b4-318cc9772927">Earlham College, IN</option>
+<option value="e8163a63-1e93-408c-9ca1-ac97442c918d">East Carolina University, NC</option>
+<option value="e35f6d0a-7e89-4097-b434-46acd0dc7615">East Stroudsburg University, PA</option>
+<option value="0e267030-d9ad-4878-b117-7766a237ce60">Eastern Illinois University, IL</option>
+<option value="dcf7d5dd-0978-42d2-9aed-158dac629980">Eastern Kentucky University , KY</option>
+<option value="f1a5ddb6-ec7d-4a57-97ef-183733052afb">Eastern Washington University, WA</option>
+<option value="f40d4dae-30b0-48bf-b9f9-c56823802b8c">Eastern Wyoming College, WY</option>
+<option value="140d6a56-888b-4448-8350-e01396ad1d82">Edinboro University of Pennsylvania, PA</option>
+<option value="7ffbd6ae-b630-4b7f-9cb7-f922c9585076">Ellsworth Community College, IA</option>
+<option value="d587d20b-e80b-40e1-ad0b-894bbd538e98">Elmira College, NY</option>
+<option value="b3b88cd6-9efa-4262-a905-570219bcd240">Elms College, MA</option>
+<option value="f3808096-7dc9-491e-b3d3-2acd0ff708ed">Elon University, NC</option>
+<option value="1568d617-5e78-45ab-ad32-6527f3796ca2">Emory &amp; Henry College, VA</option>
+<option value="2573ecad-d07e-431c-814a-536daf876c2c">Emory University, GA</option>
+<option value="ce28d10c-be55-4cca-89d9-73ed8147ede5">Endicott College, MA</option>
+<option value="edd4f003-7599-4b90-a9a6-d601bff0d927">Erskine College, SC</option>
+<option value="e5fcefeb-e42a-442e-aa12-670ece9a55d0">Fairfield University, CT</option>
+<option value="aade5e21-c3c1-42a1-ab7b-cfea396d3e7a">Ferris State University, MI</option>
+<option value="043f9cfe-0250-48a5-b5ce-d8a37adf662f">Ferrum College, VA</option>
+<option value="61d6ebde-7723-4c0c-a3c3-bccc914d2703">Florida Atlantic University, FL</option>
+<option value="d5c72f32-cd40-40e9-861b-5b6855b154d5">Florida Gulf Coast University, FL</option>
+<option value="520d3d3f-16fe-489a-b1db-ac4b44fc06fe">Florida International University, FL</option>
+<option value="94b8fe4f-30bf-4b30-a227-0f719ac15736">Florida Southern College, FL</option>
+<option value="b830a7b8-2044-46ef-8785-2563205f8f48">Florida State University, FL</option>
+<option value="3305e165-874e-47f5-ac1a-7783f2b599b0">Framingham State College, MA</option>
+<option value="a5ce3708-cb50-4c14-a372-f7c6777cd074">Franciscan University, OH</option>
+<option value="394db08c-2cb6-4385-aacb-3544c6bea7d5">Franklin and Marshall College, PA</option>
+<option value="c39e5ceb-508a-4b16-b897-3d69276fc91f">Franklin Pierce College, NH</option>
+<option value="9fb1fad9-5b8c-4765-901d-45be62e52587">Furman University, SC</option>
+<option value="25f196d2-7a10-41b7-b348-469b1b3b0b9e">Gardner-Webb University, NC</option>
+<option value="d34cdeb8-3e19-43a2-8380-c73fc5819007">George Mason University, VA</option>
+<option value="7f8af570-725f-4577-ae6d-35a5f577175f">George Washington University, MD</option>
+<option value="4d4b5ab8-040b-424c-806b-0f16c5adaad2">Georgetown College, KY</option>
+<option value="6d0cff0c-0e44-4235-821f-382b700f323e">Georgetown University, DC</option>
+<option value="f61bba00-de18-4d34-951a-536ad8b5c2ca">Georgia College and State University, GA</option>
+<option value="1c806f60-2341-4fd2-ac8b-986051e176d7">Georgia Institute of Technology, GA</option>
+<option value="ad26e929-a866-41be-bb2c-e12dfadb6630">Georgia Southern University, GA</option>
+<option value="a44a6100-5e4b-4ef5-88ed-96a785d2e6e9">Georgia State University, GA</option>
+<option value="3dbee21b-b74d-468a-a1fb-b0669460dfe6">Gettysburg College, PA</option>
+<option value="aa0a1b69-7044-4fd4-ac25-94800829b4b5">Goucher College, MD</option>
+<option value="054bd0e7-e877-4c10-8d5e-2df49984c1ee">Grand Valley State University, MI</option>
+<option value="f498b1ed-73f6-4bc4-9907-ed44bbe1fcf1">Grinnell College, IA</option>
+<option value="4bd6f2a1-55bc-4b33-9295-5e5a4b40087c">Grove City College, PA</option>
+<option value="43320c5d-1bce-49f9-9f84-291a957fb274">Gustavus Adolphus College, MN</option>
+<option value="c33e2500-9494-4f63-9524-73627ab563a1">Gwynedd-Mercy College, PA</option>
+<option value="45835082-6cf9-4896-86b2-94ff30d848a7">Hamilton College, NY</option>
+<option value="57ce41b8-1844-4034-ae59-df0e2b4e16e4">Hampden-Sydney College, VA</option>
+<option value="af85bb13-47c4-4458-be96-7d7a819285c1">Hampshire College, MA</option>
+<option value="c105d491-d8e7-45d1-be8f-2c0c48ba4a1a">Hartwick College, NY</option>
+<option value="1d2175a2-6f59-4139-9871-2927ff4088e5">Harvard University, MA</option>
+<option value="9bf54ce2-8674-4e2b-8431-a396bbf3452f">High Point University, NC</option>
+<option value="761b67ce-5997-49f4-9b65-7fa63ad6bdb7">Hillsdale College, MI</option>
+<option value="0f474136-d226-4495-b37b-13778c8a11f2">Hiram College, OH</option>
+<option value="6002e8a2-62d7-43b2-98c1-50dbe2bfaf0d">Hiwassee College, TN</option>
+<option value="c94fcb41-be37-4151-b4bd-6d326b3e6aab">Hobart and William Smith Colleges, NY</option>
+<option value="63726348-f9a4-40c1-af8d-bc1804e42e5d">Hocking College, OH</option>
+<option value="334fa1e2-934c-43de-92af-a5938ec3e215">Hofstra University, NY</option>
+<option value="324ce8d7-e6cb-4a6a-8466-ffa071ffeccc">Hollins University, VA</option>
+<option value="c8668a9b-b6da-45df-95f7-dd5b5824d9d0">Hood College, MD</option>
+<option value="602b4699-64a2-4b49-b744-924d9eabac54">Illinois State University, IL</option>
+<option value="65d703a6-c449-4c6f-ac9a-eb590e72c82b">Illinois Wesleyan University, IL</option>
+<option value="12bfcd66-2fb2-46f0-8d51-343bdb387dd8">Indiana University, IN</option>
+<option value="93a6965d-52d3-462f-af52-9b4af0540bc6">Indiana University at South Bend, IN</option>
+<option value="d680a179-21b3-4ec2-be80-b25712a6e534">Indiana University East, IN</option>
+<option value="6d436a8c-4f86-4e12-9749-701e64ca3988">Indiana University of Pennsylvania, PA</option>
+<option value="aaef88f1-6de1-44e7-b586-fbe01c061335">Indiana University Purdue University Fort Wayne, IN</option>
+<option value="58fae0e3-ca30-4f82-ac57-5d46099965fa">Indiana University Purdue University Indianapolis, IN</option>
+<option value="e943d7e8-b337-4f78-81d0-79e031c139e2">Iowa State University, IA</option>
+<option value="0d285ea8-5743-453f-a3bd-b91fca3a3c98">Ithaca College, NY</option>
+<option value="5b26c0a5-88cc-4a06-9d48-586a9f75ddec">James Madison University, VA</option>
+<option value="ebf8030e-6031-475c-8bbd-e5db7e839c62">Johns Hopkins University, MD</option>
+<option value="7da802fe-ab60-4bbf-95f4-f5ba73f0cce2">Johnson&amp;Wales University, RI</option>
+<option value="0d33d986-cd4e-425d-9ab9-5f0eccf70607">Judson College, AL</option>
+<option value="c514925b-73c4-436e-b881-687a4dd4b1f7">Juniata College, PA</option>
+<option value="2cd62bd7-f0d1-4695-aaf1-11abcbceff03">Kalamazoo College, MI</option>
+<option value="f71f4b59-501c-4ebe-b93a-b513fa2452df">Kansas State University, KS</option>
+<option value="4c083896-1b94-4ab6-b6e2-baf1029f4a2a">Keiser University, FL</option>
+<option value="f286bc7e-5144-43db-8fe0-11266e20aa16">Kennesaw State University, GA</option>
+<option value="5ed2fc93-9ddb-4ef6-82ce-c896d6520f74">Kent State University, OH</option>
+<option value="89d99491-f32b-47a6-ad4b-d496f57c317c">Kenyon College, OH</option>
+<option value="73aa9d21-9900-4083-9a0b-75cb1262354e">Keuka College, NY</option>
+<option value="6675672e-a4c5-4d5e-aa61-a4040598ff62">Knox College, IL</option>
+<option value="51f022e4-935c-4fcd-9d32-c98a1fef19dc">Kutztown University, PA</option>
+<option value="c52ea645-781c-459b-8491-2cdbf91aabad">Lafayette College, PA</option>
+<option value="2ac39f48-dbc9-407c-87fc-1c696d6c7d92">Lake Erie College, OH</option>
+<option value="2dec8517-12c2-47d2-9fcc-6bdaf96eb5c4">Lake Forest College, IL</option>
+<option value="3e89000c-ca1c-4f57-be30-ffc95d5819da">Lake Land College, IL</option>
+<option value="7b684717-e82c-4787-b800-96c4f3b11b48">Lakehead University, ON</option>
+<option value="b05e2d2c-cd8d-4b43-bc64-fc241756af4f">Lakeland Community College Equestrian Team, OH</option>
+<option value="83a4266e-c3ef-4106-90a8-c1943d510d9e">Lander University, SC</option>
+<option value="e51d4386-13ac-41ce-96e3-8aac8528cf98">Landmark College, VT</option>
+<option value="043a56ba-c050-48d8-a57b-86f0af268444">Laramie County Community College, WY</option>
+<option value="ff963882-857e-4e3f-9b75-47db250a9edb">LaSalle University, PA</option>
+<option value="d5013110-8079-47fe-a96d-1e7e816b45e4">Le Moyne College, NY</option>
+<option value="4f71790c-0973-4343-9146-c656fb5eec57">Lebanon Valley College, PA</option>
+<option value="3c5dbc2f-394a-474e-8d9c-04588273e282">Lehigh University, PA</option>
+<option value="f2a1ca4b-c6d4-47dd-a75b-6cff3827ca74">Lenoir Rhyne University, NC</option>
+<option value="23b2ff1e-11cf-47a1-8967-9df84bd84307">Liberty University, VA</option>
+<option value="65964707-a957-45fc-92e2-96be106622c5">Linn-Benton Community College, OR</option>
+<option value="b00ef623-1a01-43bb-a7c8-5683de39dac2">Long Island University , NY</option>
+<option value="11b11754-fba7-4094-a638-8838d7bb717d">Longwood University, VA</option>
+<option value="f6e25e0b-ed5c-4be6-8e6a-dcf0f5750a27">Louisiana State University, LA</option>
+<option value="ff352d54-e771-4d82-9715-53409e450838">Loyola University Maryland, MD</option>
+<option value="96accc19-0d6f-4ae6-9d16-0ca663776db5">Lycoming College, PA</option>
+<option value="9aec433f-d110-4561-a241-65439c4c0050">Manchester University, IN</option>
+<option value="a90d9dc7-61f6-4ff8-a7cc-c4b22761b57f">Manhattanville College, NY</option>
+<option value="8560965c-3d35-4c9f-a943-188df10cdb75">Marist College, NY</option>
+<option value="e4a7e99b-e910-405e-89d8-fb0980a7cd84">Marquette University, WI</option>
+<option value="65a52d79-a089-4871-98e7-b105823d918d">Marshall University, WV</option>
+<option value="8723740f-6f0c-4d6d-aa40-28538fad33cf">Martin Community College, NC</option>
+<option value="f8efb67b-1ede-401d-9566-726181a243a8">Mary Baldwin University, VA</option>
+<option value="5ebce270-a144-4024-9f7f-8ccbb7769505">Maryville College, TN</option>
+<option value="20dc4d45-6a3a-42f5-8dbd-dfdbb436959c">Maryville University, MO</option>
+<option value="546a2ec2-e713-43d6-936a-4351ba97620a">Massachusetts College of Liberal Arts, MA</option>
+<option value="0f59d811-76ae-43bf-a28f-ac85880d4421">Massachusetts Institute of Technology, MA</option>
+<option value="f7a037f4-4fee-4d06-8e61-9e5593878116">McNeese State University, LA</option>
+<option value="864a5050-858d-4fd1-97ec-e57591224c4c">Mercer University, GA</option>
+<option value="a5c3bc60-3926-4690-a3dc-6139daaefad2">Mercyhurst University, PA</option>
+<option value="67cd18e9-35d9-4ee4-80dc-7a98465188ca">Meredith Manor International Equestrian Centre, WV</option>
+<option value="ecb9be21-7c14-4908-85b8-b1c7bba8a3f2">Mesalands Community College, NM</option>
+<option value="ef8b4530-d63e-4935-af0e-13c7bd3e1158">Miami University of Ohio, OH</option>
+<option value="5c3fe4f0-f7a7-4dc4-a807-3c2caa010aaf">Michigan State University, MI</option>
+<option value="318803ce-03fa-4fcc-9db6-13f2d32dfa52">Middle Georgia State University, GA</option>
+<option value="c1069033-da6e-4a5b-838f-ae4bea98c25e">Middle Tennessee State University, TN</option>
+<option value="80ee2849-b6bc-4622-90ae-516e6a46ca22">Middlebury College, VT</option>
+<option value="9978440b-5f99-4da5-862e-f603b29590f9">Midway University, KY</option>
+<option value="a44cdd01-5e0f-4c91-b02d-71131e85ac0d">Millersville University, PA</option>
+<option value="66807396-a6fd-4164-9b8f-c0eed3a946c4">Mississippi College, MS</option>
+<option value="79ff9f84-110e-4fe5-8a0c-ce94447653ce">Mississippi State University, MS</option>
+<option value="bf4dcfbb-e380-408d-914e-3251d7d1076d">Missouri State University, MO</option>
+<option value="e76634eb-9af0-4785-80fa-648219e62d08">Molloy University, NY</option>
+<option value="2dae907a-7929-4fcc-8ea4-f67a38c5705f">Montana State University, MT</option>
+<option value="c872f844-128b-46c2-9551-3d2defad08cc">Montana State University- Billings, MT</option>
+<option value="e1e28a35-d9d3-4c60-b13e-ed11515740df">Montana Tech of The University of Montana, MT</option>
+<option value="d0aaaea0-f238-42c7-ba06-3f5114cb7be2">Montclair State University, NJ</option>
+<option value="51a7c41c-3b60-4455-8bdb-0f5c7993bca5">Moravian College, PA</option>
+<option value="f9d7ddf4-8b31-458c-9803-7e8c3bcc3488">Morehead State University, KY</option>
+<option value="a0237d4a-99f5-4e93-92b1-81bbbffc9d3f">Morrisville State College, NY</option>
+<option value="054a1628-4129-4b81-aea9-eda2f50d20fe">Mount Holyoke College, MA</option>
+<option value="e04a8c0a-eb25-4c7a-93e1-6790b4ef7a24">Mount Ida College, MA</option>
+<option value="519afbbb-58d9-45f8-939e-20b710fc6535">Mt. San Antonio College, CA</option>
+<option value="2480f3bb-e1ac-4fc6-9546-7b64ad3fc5a6">Mt. St. Mary's University, MD</option>
+<option value="998898a8-7b5c-40a4-a3b8-3d8032ce672a">Murray State University, KY</option>
+<option value="679b06db-cbb0-4c50-9712-a4b1d2e3168c">Nassau Community College, NY</option>
+<option value="081f7fe6-f89b-4947-8a1c-1ed9c20caa7f">Nazareth University, NY</option>
+<option value="c96b9494-5e2c-4dd9-9d3c-5d5d723f9ad3">Nebraska College of Technical Agriculture, NE</option>
+<option value="e1cb9be5-f72e-4f82-87a9-e0ca83643c2c">New Mexico State University, NM</option>
+<option value="ac176f9f-0227-4200-a804-82ca5e27cd17">New York University, NY</option>
+<option value="933eb593-a1f3-4bf1-92ca-83394b7a22f4">North Carolina A&amp;T State University, NC</option>
+<option value="22895aac-1bbf-423a-aaee-fa246ddbe1b5">North Carolina State University, NC</option>
+<option value="bb77411e-e980-4055-bdd4-5d0dae93a974">North Central Texas College, TX</option>
+<option value="9ad6c47e-d058-4dc2-9487-a798d592bf84">North Dakota State University, ND</option>
+<option value="23c5042d-0004-49de-a4a6-3ea01eb741a6">Northeastern Oklahoma A&amp;M College, OK</option>
+<option value="c1fabcf8-1b95-4557-8880-28c575b2abe0">Northeastern University, MA</option>
+<option value="fae598a0-2a13-49dd-bec4-4131aa5464c2">Northern Arizona University, AZ</option>
+<option value="0e3bdbae-d0fc-45f2-b372-d728a22f9a3a">Northern Illinois University, IL</option>
+<option value="dfe41fc0-8b1e-413e-979f-58082fdb6e82">Northern Kentucky University, KY</option>
+<option value="49d3cd3a-1fa8-4d16-8b9c-708dc64d939e">Northwest Community College, WY</option>
+<option value="86fa8eeb-310b-483c-b3ca-109cde4fe2ea">Northwest Missouri State University, MO</option>
+<option value="aaab2c89-968f-4f10-83ae-f08a3e2cbe2a">Northwestern University, IL</option>
+<option value="3a2e1275-009a-42d2-b449-f00c11d1ba5b">Norwich University, VT</option>
+<option value="5baf842d-141f-4ff0-9704-56370c3ab9f8">Nova Scotia Agricultural College, NS</option>
+<option value="f58a6b9a-fd4d-48e9-97c5-d7cd59f65411">Nova Southeastern University, FL</option>
+<option value="0d33177c-1686-40a5-9022-0587af9d7601">Oakland University, MI</option>
+<option value="d302e519-3ea0-43f7-a30b-55a555f44820">Oberlin College, OH</option>
+<option value="f2469a0a-0053-4472-a72d-cfe609b7c8ec">Ohio State University, OH</option>
+<option value="e08e2da4-2ae8-4dda-b466-3ecaa7900cb4">Ohio University, OH</option>
+<option value="37eb1cc0-f842-4e64-a001-c23691eb9f2f">Ohio University Southern, OH</option>
+<option value="40f9ba22-95b3-4c37-9a12-1274e8115e47">Ohio Wesleyan University, OH</option>
+<option value="46e0cf74-81da-4313-a919-4cc6325fcb16">Oklahoma Panhandle State University, OK</option>
+<option value="035702f9-01c7-47d3-b8c6-9f1a2351521c">Old Dominion University, VA</option>
+<option value="93b59dd3-14fe-4cd6-85a6-8da90b739b0b">Oneonta State College, NY</option>
+<option value="6d2e932d-d8b3-4a57-96fd-6555c3fe67c9">Oregon State University, OR</option>
+<option value="f287830f-2f32-4c79-b709-2a151a960126">Otterbein University, OH</option>
+<option value="2eab5374-a64a-47b4-b62b-8f7ccb277964">Pace University, NY</option>
+<option value="1494a8a9-6fbf-4541-a626-ce6df8569c19">Palm Beach Atlantic University, FL</option>
+<option value="932cbdbf-a9ef-4ab1-95dd-e5ec97a91e13">Parkland College, IL</option>
+<option value="ecf042c4-6a65-4191-828a-4a886baa67a1">Penn State Altoona, PA</option>
+<option value="2ff085c5-cd42-410a-bbe7-39b113fbee1d">Penn State Berks Equestrian Team, PA</option>
+<option value="8e03d0df-4d0b-4105-953d-e714b8f42a9c">Penn State Erie - The Behrend College, PA</option>
+<option value="a932e9d2-ab8d-4d28-9c1e-aeabccceb783">Penn State Harrisburg, PA</option>
+<option value="c9e6a490-9438-4ee7-bcf5-ea5676ae8feb">Penn State University, PA</option>
+<option value="933075ed-c03f-4b4f-8e37-6c5978a7e5b7">Pennsylvania State University-Fayette Eberly Campus, PA</option>
+<option value="fd4d3945-2126-4292-a3a5-2e84d5be8ebb">PennWest University - California Campus, PA</option>
+<option value="03ac0bc2-f7bb-4517-b6ba-92b30316b27c">Pepperdine University, CA</option>
+<option value="f23c1610-5f7b-4152-97e6-15ad1b4fd3dd">Post University, CT</option>
+<option value="fb662809-9e02-4645-a751-330d4fce380f">Pratt Institute, NY</option>
+<option value="800d2c65-67c4-4b09-9858-9c05544b2bbf">Princeton University, NJ</option>
+<option value="ee0c746a-d41e-40d7-a8b1-0b2027bf6f28">Purdue University, IN</option>
+<option value="019aa1f1-7506-4eb0-a5a2-9438827d789e">Purdue University North Central, IN</option>
+<option value="316316ea-7ca0-474d-8cfe-96612680747f">Purdue University Northwest, IN</option>
+<option value="a4f329c4-9bac-4854-95b2-a10b72c62b96">Radford University, VA</option>
+<option value="7524ce3c-24ed-48ca-acd4-1bbe999239f0">Randolph College, VA</option>
+<option value="8672c264-2109-492a-900a-3d895ddc099d">Randolph-Macon College, VA</option>
+<option value="da196e82-ead8-4395-9b0d-5bfdba0c32c6">Redlands Community College, OK</option>
+<option value="4ef06dd7-6d5f-45ac-860c-32951fbc85a3">Reedley College, CA</option>
+<option value="c98a28c1-710f-4ae0-97a6-339d595c9d5b">Rensselaer Polytechnic Institute, NY</option>
+<option value="a78a2d61-424b-4e30-987e-960ba3bfba1a">Rhode Island College, RI</option>
+<option value="7159cc24-e9a8-447c-8b64-f1c47cc4319a">Rhodes College, TN</option>
+<option value="2776529d-ad4d-44ff-8fe2-bcdce18ac986">Rice University, TX</option>
+<option value="1d545e06-c369-4204-b41f-ca7b0db407bb">Richard Bland College, VA</option>
+<option value="cee4be51-4843-4493-961a-288a2838dfc6">Rider University, NJ</option>
+<option value="be6413bc-de20-4ebf-8575-4cf542f7895b">Ripon College, WI</option>
+<option value="bb44e311-f3fe-4126-9a05-ae59e0390ad7">Roane State Community College, TN</option>
+<option value="86cf303c-d74a-494b-a05e-f40593ebc8a8">Roanoke College, VA</option>
+<option value="844db66a-1cac-4aba-b992-a56792500250">Robert Morris University, IL</option>
+<option value="2ef9c62c-4d1c-4d63-b4b0-1ddbbbc66593">Rochester Community and Technical College, MN</option>
+<option value="0feb1fc7-1c57-42cb-99b6-560cc0daea87">Rochester Institute of Technology, NY</option>
+<option value="0283a363-c0e5-4ff4-a32c-57534368d9db">Rocky Mountain College, MT</option>
+<option value="3147815a-6956-42de-96ca-e09d88e7c86d">Roger Williams University, RI</option>
+<option value="afee7d85-6ee1-4083-ae7a-6b3ee64aa9f7">Rollins College, FL</option>
+<option value="b3846384-71ae-442b-aa09-d8ac73ab9c79">Rowan University, NJ</option>
+<option value="c30f7146-ccff-4d25-88f1-78c555c3b3d1">Rutgers University, NJ</option>
+<option value="618f9828-0153-4dd3-85da-fadb698d90d3">Sacred Heart University, CT</option>
+<option value="d49f4b47-0331-4329-8da1-68a5a4d221b8">Saginaw Valley State University, MI</option>
+<option value="1a9a6e56-052d-4477-9ff0-e64c0c8feb5e">Saint Leo University, FL</option>
+<option value="8eebc405-5a30-4f4e-b0f5-44211c1a7d16">Saint Louis University, MO</option>
+<option value="70146a9c-79fc-48dd-bd23-a52ff8fdcb17">Saint Mary's College, IN</option>
+<option value="07eb358a-6445-49f2-a203-95d42ca85ba8">Saint Vincent College, PA</option>
+<option value="1917ec92-935d-4c4d-a66f-d67c301320be">Salem College, NC</option>
+<option value="0bac2a78-d89f-4d5e-8a59-938bafd81895">Salem International University, WV</option>
+<option value="68ee6c7a-388f-42d6-b058-1c223950066a">Salisbury University, MD</option>
+<option value="2ba26ada-323c-493c-beff-11ddddd8a31c">Salve  Regina University, RI</option>
+<option value="cb296f1e-0f7b-43c9-8b6e-73d8c7e35356">Sam Houston State University, TX</option>
+<option value="ee6a40c2-0746-44f4-bd80-18bb1d95b4b7">Samford University, AL</option>
+<option value="c16c7ca3-e200-44de-87a4-a7cb058c66e9">Santa Clara University, CA</option>
+<option value="83a6c782-ad1d-495b-9795-71c728fe640d">Sarah Lawrence College, NY</option>
+<option value="71c789d1-d357-4087-b590-807d43356a4c">Savannah College of Art and Design, GA</option>
+<option value="39afacb3-14f9-4341-853a-0d7ebf951617">Schreiner University, TX</option>
+<option value="9d5e83ee-582c-40a4-aaf0-73883c033b85">Seattle University, WA</option>
+<option value="7bea299e-be2d-42c7-a5dd-3b5f8bf5709b">Seton Hill University, PA</option>
+<option value="e77e0644-efb3-470c-9ed0-99172b55dfb8">Shippensburg University, PA</option>
+<option value="232f2879-b2d7-4a14-98dd-b394a9657213">Siena College, NY</option>
+<option value="ab7af832-6063-402b-9305-d11f8a6ee510">Sierra College, CA</option>
+<option value="16ffe77f-2722-42ff-bd6f-e538202a42c7">Sierra Nevada College, NV</option>
+<option value="5a653de2-5692-45aa-847d-6b48026d0bdd">Skidmore College, NY</option>
+<option value="1e5da50c-5b70-42b4-b9cc-884b44533684">Slippery Rock University, PA</option>
+<option value="dfa31df8-ba40-46bb-b91d-077b526e0be2">Smith College, MA</option>
+<option value="ebc6b940-efd6-41af-bd1c-16bb5a7f0a12">Sonoma State University, CA</option>
+<option value="a5b2a997-1cb6-4d81-a2f3-8a9b7a2f16ae">South Dakota State Univesity, SD</option>
+<option value="7718732f-4ad3-4222-becb-0de13d17811e">Southeast Community College, NE</option>
+<option value="a68cc811-3c9b-4ba9-9783-340498b56073">Southeast Missouri State University, MO</option>
+<option value="bc07e5b3-8bdc-4a22-b6fd-b5b3ee62898c">Southern Illinois University Carbondale, IL</option>
+<option value="5a484944-7cd5-4815-8b7c-352b6beec13e">Southern Illinois University Edwardsville, IL</option>
+<option value="63ad9cea-573f-4050-9275-8d456222a614">Southern Methodist University, TX</option>
+<option value="e7b75849-0040-4d1f-a568-64813439d077">Southern Nazarene University, OK</option>
+<option value="fc2cf59b-3649-422f-958f-fc0921a2483d">Southern Oregon University, OR</option>
+<option value="01f0c025-11ae-48d8-96f8-c9ea86a41593">Southwestern University, TX</option>
+<option value="c31c4305-99b6-4184-a1bf-7f3cfaee35ea">Springfield College, MA</option>
+<option value="1d6dc9d0-ed57-4686-aec0-9f89d7567e76">St Cloud State University, MN</option>
+<option value="43445d2b-06da-4fd0-bb02-0ccc3f6d72a6">St Olaf College, MN</option>
+<option value="dc01a563-a0fb-4d0a-9b01-baff56e94073">St. Andrews University, NC</option>
+<option value="ea1338df-3a31-4cdd-87d2-ca80e55f48a6">St. John Fisher College, NY</option>
+<option value="531b7242-ac0a-4bbd-9dd6-5cca1eeaa9df">St. John's University, NY</option>
+<option value="cd0ced74-3918-4aa2-aba5-d0d3f855f694">St. Joseph's College, NY</option>
+<option value="f528ab29-de1a-4b3f-9955-abf4042717d7">St. Lawrence University, NY</option>
+<option value="79ac4dcb-ee4b-41db-bdcb-eb2d866e0361">St. Mary-of-the-Woods College, IN</option>
+<option value="2cef0fba-3455-4920-93ce-73e944629f4b">St. Marys College of Maryland, MD</option>
+<option value="767413a9-cee1-4a16-894a-91a13ed70b03">Stanford University, CA</option>
+<option value="0a02aa91-88da-46b0-bd6e-0200c1f989bf">State University of New York at New Paltz, NY</option>
+<option value="6d84a077-8c23-4bec-bb36-8dea8acfcfff">State University of New York at Oswego, NY</option>
+<option value="138b723b-a2b7-4e23-9ee9-507641b54d4f">State University of New York at Potsdam, NY</option>
+<option value="9aa57260-0fb3-4cd7-83dd-32a404a69392">Stephen F. Austin State University, TX</option>
+<option value="de0a4056-25bb-4fec-a21a-1c294ec20728">Stetson University, FL</option>
+<option value="d53c0358-3b18-4613-9d44-b66cab36e89a">Stevens Institute of Technology, NJ</option>
+<option value="23d65228-61cb-44ca-95ae-3c68624ba008">Stockton University, NJ</option>
+<option value="284b277a-3e7f-4b96-9c69-5bb2026c37d4">Stonehill College, MA</option>
+<option value="a70692d0-99c4-4c86-9d62-f500a2adeddb">Stony Brook University, NY</option>
+<option value="9144b4b3-d843-4f5f-964e-aeeba0a9449a">Suffolk County Community College, NY</option>
+<option value="9f2f816f-798e-4184-b2d1-b5afe74e9e2e">Sul Ross State University, TX</option>
+<option value="2f541fd0-ed08-4e39-b84d-df225adeef15">SUNY Albany, NY</option>
+<option value="1f57dfb0-7312-498b-8074-4ce5420b50d3">SUNY Cobleskill, NY</option>
+<option value="ae4119d2-cd90-4b4a-8741-551c4a1d2586">SUNY Cortland, NY</option>
+<option value="619bc652-4e6b-429c-869c-b11e9c8825c7">SUNY Geneseo, NY</option>
+<option value="ca184ce6-c5e2-4d15-9f64-8ecca41c8ff3">Susquehanna University, PA</option>
+<option value="ae27dfb0-57a3-4d5f-abed-96ee7cbb880f">Sweet Briar College, VA</option>
+<option value="0b45889d-f24c-4c34-88d5-5fd6d5f0ef08">Syracuse University, NY</option>
+<option value="7157e9d1-bd21-46ac-b128-a93987c6993a">Tarleton State University, TX</option>
+<option value="3a1d7801-b49b-436d-83cb-06e7bfd82c35">Taylor University, IN</option>
+<option value="9c4f8552-fad4-45f0-a295-16813d64ff98">Temple University, PA</option>
+<option value="f9ae7ef2-a46a-4dfe-bed1-c3e9abb95574">Tennessee Tech University, TN</option>
+<option value="5ae1b914-bb84-495f-a3b6-5c326f054f27">Texas A&amp;M University, TX</option>
+<option value="d2a79406-4445-4991-95a5-60a2ebfe82ef">Texas A&amp;M University-Commerce, TX</option>
+<option value="74f38f93-10be-48d0-886a-05ba9c7a4d6a">Texas State University-San Marcos, TX</option>
+<option value="6d921608-8744-45ca-b09c-39da64d4c9e2">Texas Tech University, TX</option>
+<option value="f2e9bab3-b087-4acf-839e-b2446c199ffe">The Cooper Union, NY</option>
+<option value="fbda4bd4-89ab-4207-990a-f28a89a0cda7">The University of Akron, OH</option>
+<option value="26c70393-3299-473f-b84f-c3a4060adcc7">The University of Memphis, TN</option>
+<option value="c642692d-b710-45c0-b6b5-ef3bba0fb5f4">The University of Oklahoma, OK</option>
+<option value="83f0b357-ae73-43da-82e3-0da2de7c06e0">The University of the South, TN</option>
+<option value="d9f85f9c-aaa0-4e82-a080-5d083dbf5f5e">Thiel College, PA</option>
+<option value="524a45c5-ebe3-4f1a-849e-d40b4932c1df">Tiffin University, OH</option>
+<option value="bdd35541-dfdd-4c3d-aef0-0e9addff3d22">Towson University, MD</option>
+<option value="50aa29f4-2dc7-4d55-9cc6-04a10f292048">Transylvania University, KY</option>
+<option value="f1c46433-3142-490e-8243-0e025afe512a">Trent University, ON</option>
+<option value="1ee59c91-bb7f-45f9-b59e-6e3252606f25">Trinity College, CT</option>
+<option value="3446197f-c9d7-4bc2-9b11-662cf897267d">Trinity University, TX</option>
+<option value="dfab54d7-d9ae-4642-8a06-f5d4e72815b4">Truman State University, MO</option>
+<option value="45330f02-f9d3-4bb3-814c-05c04dc089a6">Tufts University, MA</option>
+<option value="4e79d731-f78a-46bc-aa2b-a54a6213709d">Tulane University, LA</option>
+<option value="e073ba53-dcb3-4505-8a5b-ce4fe7afc99f">U.S. Air Force Academy, CO</option>
+<option value="09a72334-1f6b-48f3-bfc3-52ab87f0bfc1">UNC-Chapel Hill, NC</option>
+<option value="641b9277-fb62-41f3-b47a-7f7163559a35">Union College, NY</option>
+<option value="bf21dc7f-718b-41bf-9a92-7cc2663d658c">United States Coast Guard Academy, CT</option>
+<option value="889b6625-e19c-4ac7-aee7-09e94c1d8566">United States Military Academy, NY</option>
+<option value="e94c86f4-1fb7-49e1-b69a-f81e90c64157">United States Naval Academy, MD</option>
+<option value="4cc4f550-4147-4092-b51d-7e8b58edcc5d">University at Buffalo, NY</option>
+<option value="99ad1c87-97e7-49e1-b8ee-838510539098">University of Alabama, AL</option>
+<option value="023d183a-dfc8-4b0d-95c9-59354a6ec2e0">University of Arizona, AZ</option>
+<option value="6107da99-5963-40e7-ab46-fa21a78b83fd">University of Arkansas, AR</option>
+<option value="ccaa7d29-e299-4e69-8e1f-2825c89807dc">University of British Columbia, BC</option>
+<option value="21d96cf7-6102-4d2c-896b-a652ba999e08">University of California Irvine, CA</option>
+<option value="12387408-c153-42ca-bec3-0572f73326b6">University of California San Diego, CA</option>
+<option value="f14ae7e1-64d1-445d-bb97-1ee9868ab803">University of California, Berkeley, CA</option>
+<option value="656c821a-c5f2-490d-a69a-284edcf97520">University of California, Davis, CA</option>
+<option value="a0471681-8c24-42ce-b902-ea41a4e16513">University of California, Los Angeles, CA</option>
+<option value="39af0e41-f2c5-464a-b1af-44d785b3bb53">University of California, Santa Cruz, CA</option>
+<option value="4f69626a-c0ee-456d-ba8e-f4c93da9f227">University of California: Santa Barbara, CA</option>
+<option value="9ed6e991-7a20-4f45-9cfc-0a17cddfffc2">University of Central Arkansas, AR</option>
+<option value="9a3ceced-765e-4e0e-b2e0-69720d698577">University of Central Florida, FL</option>
+<option value="cfb812a5-4184-4036-88e5-c207704d251f">University of Cincinnati, OH</option>
+<option value="ea329db3-7365-45b0-9f44-be01484f345b">University of Colorado - Colorado Springs, CO</option>
+<option value="4fa87987-46fe-4e1f-9f3c-a8365992aa71">University of Colorado, Boulder, CO</option>
+<option value="c72726fc-bd00-4683-abfd-bce7fd44eb4c">University of Connecticut, CT</option>
+<option value="01546bff-92b6-41ee-b580-075e7ad57a45">University of Dayton, OH</option>
+<option value="c4d02fd2-63ca-478c-8406-3fcf06bcc5ff">University of Delaware, DE</option>
+<option value="3503fc92-0f82-4891-add8-9640ec2c7ee0">University of Denver, CO</option>
+<option value="f24b975f-ccdc-4321-b5ef-8b6825d44536">University of Findlay, OH</option>
+<option value="19a9db3d-8475-43b4-a1e9-7128eb615079">University of Florida, FL</option>
+<option value="f996c643-c300-4d7a-9dd0-29677d7a343e">University of Georgia, GA</option>
+<option value="358127a0-9518-4e1e-aaf7-2bea551be4f6">University of Guelph, ON</option>
+<option value="9a040cad-3e19-42bc-972a-5232252c9025">University of Hartford, CT</option>
+<option value="be1491c6-93c5-4a30-b1e4-c6d49e4ec664">University of Idaho, ID</option>
+<option value="790d9eff-1d39-4dff-ad39-19753ce5e182">University Of Illinois at Urbana-Champaign, IL</option>
+<option value="ccdc8ebd-599a-4bfa-8cb4-f953dcc01ffb">University of Indianapolis, IN</option>
+<option value="c54ea51b-366e-4420-a341-c66a9bdcfb37">University of Kansas, KS</option>
+<option value="9fd9d9e1-225c-4049-83fe-b1e0ec35735b">University of Kentucky, KY</option>
+<option value="58c7fc50-06d9-462c-8e4b-12d2e92b8eef">University of Louisiana at Lafayette, LA</option>
+<option value="9445e1d0-1476-4123-9bcc-eebe3c79607c">University of Louisville, KY</option>
+<option value="a4f2f04a-932f-448e-920c-b54d5837bb8b">University of Lynchburg, VA</option>
+<option value="1f3a3f8d-4395-481e-a4c2-b8eca0146e66">University of Maine, ME</option>
+<option value="b2ab75ff-44cd-42a2-ad41-80d90b4ebd1d">University of Mary Washington, VA</option>
+<option value="1d8a7c58-6e94-4442-8912-bbbdec3afad7">University of Maryland, MD</option>
+<option value="dabc80d7-33c7-4a15-8270-b9aa9d48ba92">University of Maryland, Baltimore County, MD</option>
+<option value="d6ae4af6-58de-447c-933d-773b6f3ebb4b">University of Massachusetts at Amherst, MA</option>
+<option value="a4fdd5ba-4a18-4821-b5b5-dde4a2f5f601">University of Massachusetts Dartmouth, MA</option>
+<option value="bb4104c7-d132-4300-8880-8b19dcca813c">University of Massachusetts Lowell, MA</option>
+<option value="2a722a6a-7cc4-4078-9879-83145c0c4cfe">University of Miami, FL</option>
+<option value="dddc2bf3-3713-4a5e-974c-3e1f6058c310">University of Michigan, MI</option>
+<option value="be04d296-cced-48fc-8811-eec480e6affc">University of Minnesota, Crookston, MN</option>
+<option value="e152457a-5dee-4325-a202-b82103a7018b">University of Minnesota-Twin Cities, MN</option>
+<option value="03cf9631-1548-4cc5-8e4f-44d7b5b3a07b">University of Mississippi (Ole Miss), MS</option>
+<option value="8e49202b-db58-4342-ad69-51a7d7e124c9">University of Montana, MT</option>
+<option value="0d13fb46-1ec3-4b72-b283-665053330585">University of Montana Western, MT</option>
+<option value="8a659a3f-0d7f-41ed-8460-61d3328c1e6d">University of Montevallo, AL</option>
+<option value="7f648127-6ea4-49a0-8301-d99b4cc8752b">University of Nebraska Omaha, NE</option>
+<option value="6028690f-7318-49bf-8f07-55d474042787">University of Nebraska-Lincoln, NE</option>
+<option value="bdeda6b7-8a28-4bb0-9baf-5265a3dbf15c">University of Nevada, NV</option>
+<option value="993c19ea-52d8-47fc-8afe-f51e3eedca28">University of New England, ME</option>
+<option value="073b126c-aa0e-4bc0-bd70-1fe491b96697">University of New Hampshire, NH</option>
+<option value="35edc8d5-a767-4011-99c4-dc22b234b402">University of North Alabama, AL</option>
+<option value="b21209fc-dc8f-4f1f-a449-6b051ff4d8f4">University of North Carolina at Asheville, NC</option>
+<option value="419de42f-6c54-43c5-863e-e8659522c759">University of North Carolina at Charlotte, NC</option>
+<option value="e48d467b-582c-405d-8393-811d61f3e854">University of North Carolina Wilmington, NC</option>
+<option value="61ed07e6-8986-4823-9841-e1fd67b906a7">University of North Carolina-Greensboro, NC</option>
+<option value="396c9da7-7927-4a4f-a18e-aa1518866b6a">University of North Florida, FL</option>
+<option value="73c12825-971b-4cb2-bc0b-939b6853d0d9">University of North Georgia, GA</option>
+<option value="00444d98-87c4-4b60-ae14-b79f1ee9c586">University of North Texas, TX</option>
+<option value="c552299d-48cd-4e96-a91e-03e69dc86582">University of Northern Colorado, CO</option>
+<option value="2a941d8b-bb29-412b-8399-c627f5aa3014">University of Notre Dame / Saint Mary's College, IN</option>
+<option value="96fb8815-6405-49ed-b379-2a4a5bfa14a5">University of Oregon, OR</option>
+<option value="83189f6f-1010-416d-baad-e6aab7cc174f">University of Ottawa, ON</option>
+<option value="6da8fa59-e8fc-4d1f-be23-4c8093e37405">University of Pennsylvania, PA</option>
+<option value="f2507d12-f1e3-4d1b-84a4-e0d9a746b00e">University of Pittsburgh, PA</option>
+<option value="0fa3f361-016a-4321-b243-7ca001591de9">University of Puget Sound, WA</option>
+<option value="68d90ae0-2817-4ac7-8106-d634a91d8912">University of Rhode Island, RI</option>
+<option value="32bb5005-4ee0-4f79-bac4-765326b8f3fd">University of Richmond, VA</option>
+<option value="e0fb6f51-f5f8-4e68-b837-3693c511aef5">University of Rochester, NY</option>
+<option value="7a462a68-3817-478d-95e3-763ef65053a8">University of Saint Francis, IN</option>
+<option value="9472d5e0-3a7a-405f-a9cf-b415f4e1b566">University of San Diego, TX</option>
+<option value="14e8d99c-7533-4fb1-9810-17050be1b7c4">University of Scranton, PA</option>
+<option value="b0a71c63-bbe6-4efc-ba1b-f7b3354fae74">University of South Carolina, SC</option>
+<option value="2b7f3594-398f-40fa-befc-19677e863f8f">University of South Carolina Aiken, SC</option>
+<option value="a772bb79-999b-4b63-8c73-507effa7babe">University of South Florida, FL</option>
+<option value="a643f829-c0a5-47cb-93fb-d8cff35a38a7">University of Southern California, CA</option>
+<option value="d8bc294b-1d06-42ab-94f5-445a3b48a422">University of Tampa, FL</option>
+<option value="17dbc70a-622a-4c74-a51c-1403da79a2a4">University of Tennessee - Knoxville, TN</option>
+<option value="9ef8ea29-a37a-4f78-abd0-7a359781fc44">University of Tennessee at Martin, TN</option>
+<option value="1a4f7588-eeba-4af2-aa73-434b95cf2001">University Of Tennessee-Chattanooga, TN</option>
+<option value="5b58ab2d-c630-4e8e-856d-8eb2e6528726">University of Texas at Austin, TX</option>
+<option value="4d9008de-29f1-4ffd-8c82-77d52c06e908">University of Toledo, MI</option>
+<option value="2d8af3ca-47ff-4a98-9fff-5166d4658cac">University of Vermont, VT</option>
+<option value="c7878411-b42b-4abe-a63b-7b9041afe62e">University of Victoria, BC</option>
+<option value="2557e308-aecd-4f62-a8a1-2d09842b7e76">University of Virginia, VA</option>
+<option value="ddb4eb5a-1bda-4596-8a05-01d75d5aaddf">University of Washington, WA</option>
+<option value="6d9de1a6-2fed-4805-8ae5-774efe80f09e">University of West Florida, FL</option>
+<option value="0541145b-4437-405c-b917-b54052b4b8a6">University of West Georgia, GA</option>
+<option value="6f6b40c1-87d8-46bd-8f06-e470f3810daa">University of Western Ontario, ON</option>
+<option value="20c0a68b-7ecf-4aaa-b70b-3868ab7d9d48">University of Wisconsin - Eau Claire, WI</option>
+<option value="f2334f7d-438d-4a33-9f18-452e860822b6">University of Wisconsin - Green Bay, WI</option>
+<option value="449d764a-1865-40d8-8316-ceb0406ecc19">University of Wisconsin-La Crosse, WI</option>
+<option value="6ba42041-810a-4439-898a-a501a037fffd">University of Wisconsin-Madison, WI</option>
+<option value="22de024c-2799-452d-a166-ac6b95c0c10f">University of Wisconsin-Milwaukee, WI</option>
+<option value="ff0f3980-885a-459b-b095-8f8adbef709b">University of Wisconsin-Platteville, WI</option>
+<option value="9592e8bb-4f06-455d-9be7-9040571aff92">University of Wisconsin-River Falls, WI</option>
+<option value="baf2b1fd-b6af-42cf-8e67-2e2dd6c0b987">University of Wyoming, WY</option>
+<option value="b7b30ddf-afb8-4594-ae6c-edf20a44d56f">Utah State University, UT</option>
+<option value="5ea070a7-077a-4cd4-b4d8-b2b4df978d58">Utah Valley State College, PA</option>
+<option value="b0a909aa-4b4d-4e5b-bdda-23ded0b428eb">Valencia College, FL</option>
+<option value="611bf07a-6b41-4fc2-b0e2-a8cf9f198f8f">Valley Forge Military College, PA</option>
+<option value="f1828cdc-6005-4a4e-a230-5923cca6ef3e">Vancouver Island University, BC</option>
+<option value="80f513a0-4928-48a7-b8ad-80a73a5314d1">Vanderbilt University, TN</option>
+<option value="50a70f95-9bc6-4efd-9c9c-3a0e64e0cec6">Vassar College, NY</option>
+<option value="68f6c9af-cbe9-4d47-8ee7-1c6e4ef8d453">Vermont State University - Castleton, VT</option>
+<option value="d3ba0ee4-eb35-4c1b-9f56-ed80cca368af">Villanova University, PA</option>
+<option value="35b41562-3640-4d64-9e76-9949ed9d415b">Virginia Commonwealth University, VA</option>
+<option value="a00902a7-f030-4675-9571-fb6a6b18762c">Virginia Intermont College, VA</option>
+<option value="efebec47-fdb7-4095-a06a-ab3a8eabb52c">Virginia Tech, VA</option>
+<option value="e61271b7-59e5-4b16-adf5-7602b7cb36b4">Wake Forest University, NC</option>
+<option value="946027af-97c5-4cdd-b125-cbffa9d6ea9a">Wallace State College, AL</option>
+<option value="9c04d127-c0f2-4ac1-8c90-8867fc0b84e6">Walsh University, OH</option>
+<option value="8d0183af-24b9-45ad-aa57-8bbd26daf974">Washington &amp; Jefferson College, PA</option>
+<option value="89a6cc05-eb11-4a46-9765-15c1593fa5dc">Washington and Lee University, VA</option>
+<option value="cea0077f-4247-46cf-8d03-f1640e9482da">Washington College, MD</option>
+<option value="a1a401f3-f83d-4dbb-8e71-8e5da0e7f9cf">Washington State University, WA</option>
+<option value="0e852277-14b5-41bd-bc43-b5d54cfff0a4">Washington University in St. Louis, MO</option>
+<option value="40a60857-a258-4153-beec-7126e63eca51">Wayne State University, MI</option>
+<option value="4c3c1c26-6690-4f73-9604-8dc7ed443a63">Wellesley College, MA</option>
+<option value="9da8cf31-cbfa-4d08-9561-b16acc6c6263">Wesleyan College, GA</option>
+<option value="8cf368ef-53d8-4105-9490-d031e66f3936">Wesleyan University, CT</option>
+<option value="45a6a8a8-028b-4146-8c63-9f326ce2a0a4">West Chester University, PA</option>
+<option value="7d46e939-92d3-48b7-a7be-ddbfbfce9c66">West Texas A&amp;M University, TX</option>
+<option value="d6d6f931-ee0c-4427-9b28-4e1d0da6b826">West Virginia University, WV</option>
+<option value="ac9531bf-c123-4884-a0c1-2113ee687775">Western Carolina University, NC</option>
+<option value="7fe2b382-0e2b-4772-9a77-e482a62844d0">Western Illinois University, IL</option>
+<option value="af55f495-8025-43f6-95ac-221eee68f8a7">Western Kentucky University, KY</option>
+<option value="e6ac5ed9-86f8-4079-90d7-6576dd02fab8">Western Michigan University, MI</option>
+<option value="cf2ec5d8-518d-454c-9233-c5034947a1a0">Western Washington University, WA</option>
+<option value="215e3fde-1f6c-4087-b162-416f6ae13300">Westfield State University, MA</option>
+<option value="14c36f23-6224-4bf3-9ee7-dbd5602e6fe4">Westminster College, PA</option>
+<option value="a92d7c92-5962-4a28-aca2-09d7d8545f16">Wheaton College, MA</option>
+<option value="0b38e845-f3da-4a30-98ba-8320de50e0d3">Whittier College, CA</option>
+<option value="dc0ee9ec-8dcf-407f-b548-547222a14272">Wilfrid Laurier University, ON</option>
+<option value="f8fc5662-31dd-4ecb-91f1-384211dbf6d4">Wilkes University, PA</option>
+<option value="da9c1e9b-50f5-4afd-83fd-3542ba39d5c8">Willamette University, OR</option>
+<option value="dffaca45-3cdf-494a-9bc3-0d2cb42b82a1">William Paterson University, NJ</option>
+<option value="a5ef154e-2cb5-4f03-be0a-2c5a083c0948">Williams College, MA</option>
+<option value="41faf6b6-835d-45b6-8f73-cfa544ba9a30">Wilmington College, OH</option>
+<option value="98fd95eb-f6e4-424e-a1e5-29756a8c1e8e">Wilson College, PA</option>
+<option value="6d91e14d-cb56-4c3b-a52b-d2523fadba88">Wofford College, SC</option>
+<option value="3b423b4f-5fe2-4364-a8b5-b3b965a67475">Worcester Polytechnic Institute, MA</option>
+<option value="d49a3ca5-fdd3-4500-b0e4-a8de0b1834a5">Worcester State University, MA</option>
+<option value="e2ea6462-eee5-42cc-8318-60dcb3f2c846">Wor-Wic Community College, MD</option>
+<option value="4b1f2677-bd32-4ce7-b956-1c003fad7516">Xavier University, OH</option>
+<option value="a70a7906-857e-4955-96d4-d7b555f48d92">Yale University, CT</option>
+<option value="75b87c71-2273-4fbb-bb00-2f850264f7ec">York College of Pennsylvania, PA</option>
+<option value="17c0178c-c9fd-4ff7-b9b9-8e6936b43202">Youngstown State University, OH</option>
+            </select>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div class="container">
+         <h3>Personal Information</h3>
+         <div class="form-section">
+            <label for="firstName">First Name*</label>
+            <input type="text" id="firstName" name="firstName" required>
+         </div>
+         <div class="form-section">
+            <label for="middleName">Middle Name*</label>
+            <input type="text" id="middleName" name="middleName">
+         </div>
+         <div class="form-section">
+            <label for="lastName">Last Name*</label>
+            <input type="text" id="lastName" name="lastName" required>
+         </div>
+         <div class="form-section">
+            <label for="permanentAddress">Permanent Address*</label>
+            <input type="text" id="permanentAddress" name="permanentAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="city">City*</label>
+            <input type="text" id="city" name="city" required>
+         </div>
+         <div class="form-section">
+            <label for="state">State/Province*</label>
+            <input type="text" id="state" name="state" required>
+         </div>
+         <div class="form-section">
+            <label for="country">Country*</label>
+            <input type="text" id="country" name="country" required>
+         </div>
+         <div class="form-section">
+            <label for="zipCode">Zip Code/Postal Code*</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+         </div>
+         <div class="form-section">
+            <label for="phoneNumber">Phone Number*</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="cellNumber">Cell Number*</label>
+            <input type="text" id="cellNumber" name="cellNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="primaryEmail">Primary Email Address*</label>
+            <input type="text" id="primaryEmail" name="primaryEmail" required>
+         </div>
+         <div class="form-section">
+            <label for="birthDate">Birth Date*</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div class="container">
+         <h3>School Address</h3>
+         <div class="form-section">
+            <label for="schoolAddress">School Address*</label>
+            <input type="text" id="schoolAddress" name="schoolAddress" required>
+         </div>
+         <div class="form-section">
+            <label for="addressAtSchool">Address at School*</label>
+            <input type="text" id="addressAtSchool" name="addressAtSchool" required>
+         </div>
+         <div class="form-section">
+            <label for="schoolCity">City*</label>
+            <input type="text" id="schoolCity" name="schoolCity" required>
+         </div>
+         <div class="form-section">
+            <label for="schoolState">State/Province*</label>
+            <input type="text" id="schoolState" name="schoolState" required>
+         </div>
+         <div class="form-section">
+            <label for="schoolCountry">Country*</label>
+            <input type="text" id="schoolCountry" name="schoolCountry" required>
+         </div>
+         <div class="form-section">
+            <label for="schoolZipCode">Zip Code/Postal Code*</label>
+            <input type="text" id="schoolZipCode" name="schoolZipCode" required>
+         </div>
+         <div class="form-section">
+            <label for="schoolPhoneNumber">Phone Number*</label>
+            <input type="text" id="schoolPhoneNumber" name="schoolPhoneNumber" required>
+         </div>
+         <div class="form-section">
+            <label for="expectedGraduationDate">Expected Graduation Date*</label>
+            <input type="date" id="expectedGraduationDate" name="expectedGraduationDate" required>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div class="container">
+         <h3>Login Information</h3>
+         <h5>Enter the desired username and password, which you can use to enter the portal to access your account.</h5>
+         <h5>If you have an existing coach account, please use the same username and password as the coach account.</h5>
+         <div class="form-section">
+            <label for="desiredUsername">Enter Desired Username*</label>
+            <input type="text" id="desiredUsername" name="desiredUsername" required>
+         </div>
+         <div class="form-section">
+            <label for="password">Enter Password*</label>
+            <input type="password" id="password" name="password" required>
+         </div>
+         <div class="form-section">
+            <label for="verifyPassword">Verify Password*</label>
+            <input type="password" id="verifyPassword" name="verifyPassword" required>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div style="text-align: center;">
+        <div style="text-align: center;">
+            <form action="riderAppDetails.html" method="post" style="display: inline-block;">
+                <button type="submit" class="btn-success">Submit Application</button>
+            </form>
+            <button type="button" class="btn-danger" id="resetForm" style="display: inline-block;">Cancel</button>
+        </div>
+        <br>
+        <br>
+        <script>
+            document.getElementById('resetForm').addEventListener('click', function() {
+                var inputs = document.querySelectorAll('input[type="text"], input[type="password"], input[type="date"]');
+                inputs.forEach(function(input) {
+                    input.value = '';
+                });
+            });
+        </script>
+        
+   </body>
+</html>

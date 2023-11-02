@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Include meta tags, title, and stylesheets -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         .pod-button {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px 40px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .pod-button:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .admin-pod {
+    background-color: rgba(249, 249, 249, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    flex: 1; /* Make both pods take equal space */
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.admin-pod img {
+    max-width: 100%;
+    height: 200px; /* Increase the height to make the images larger */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+        .admin-pod:last-child {
+            margin-right: 0;
+        }
+
+        .admin-pod:hover {
+            transform: scale(1.05);
+        }
+         .box {
+         display: inline-block;
+         vertical-align: top;
+         width: 48%;
+         }
+         .table {
+         border-collapse: collapse;
+         width: 100%;
+         }
+         .table,
+         .th,
+         .td {
+         border: 1px solid black;
+         }
+         .th,
+         .td {
+         padding: 8px;
+         text-align: left;
+         }
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         background-image: url('assets/images/backgroundAppForms1.png');
+         background-size: cover;
+         margin: 0;
+         }
+         .modal-content {
+         width: 90%; /* Adjust width as needed */
+         margin: 0 auto; /* Center the modal content */
+         max-width: none; /* Remove the maximum width restriction */
+         }
+         /* Add some additional styling for the content inside the modal */
+         .modal-body {
+         padding: 20px; /* Adjust as needed */
+         }
+         .modal-dialog {
+         max-width: 90%; /* Adjust as needed */
+         }
+         .button-container button {
+         margin-right: 150px; /* Adjust the value as needed for the desired space */
+         }
+         .button-container {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 10px; /* Add some space between buttons */
+         }
+         .button {
+         margin-right: 10px; /* Add some space between buttons */
+         }
+         .button-container button {
+         margin-right: 10px; /* Adjust the value as needed for the desired space */
+         border-radius: 12px; /* Add rounded corners */
+         }
+         .button-container .btn-primary {
+         background-color: #007bff; /* Change button color to Bootstrap primary color */
+         border-color: #007bff; /* Match border color with button color */
+         }
+         .button-container .btn-primary:hover {
+         background-color: #0056b3; /* Change hover color */
+         border-color: #0056b3;
+         }
+         .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set a minimum height to ensure content is visible */
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.admin-pod h5 {
+    font-weight: bold;
+}
+      </style>
+   </head>
+   <body>
+      <!-- Include the header and navigation from your previous code -->
+      <!-- ... (the header and navigation code you provided) ... -->
+      <div class="container">
+        <div class="center-container">
+         <h2>Welcome, Admin!</h2>
+         <br>
+         <br>
+         <!-- Admin Pods -->
+         <div class="pods-container" style="display: flex;">
+            <div class="admin-pod" onclick="openRandomizerModal()" style="margin-bottom: 50px;">
+                <img src="assets/images/randomizer.png" alt="Background Image">
+                <br>
+                <h5>Open Randomizer</h5>
+                <br>
+                <p>Click here to open the randomizer modal</p>
+            </div>
+            <div class="admin-pod" onclick="openAnnouncementModal()" style="margin-bottom: 50px;">
+                <img src="assets/images/announce.png" alt="Background Image">
+                <br>
+                <h5>Add Announcement</h5>
+                <br>
+                <p>Click here to add an announcement</p>
+            </div>
+        </div>
+        
+        
+         <!-- Modal -->
+         <div class="modal fade" id="randomizerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">Randomizer</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <div id="example2">
+                        <div class="grid-container">
+                           <div class="box">
+                              <br><br><br><br><br>
+                           </div>
+                           <div class="box" id="div2"></div>
+                        </div>
+                     </div>
+                     <br>
+                     <br>
+                     <div class="button-container">
+                        <input type="file" id="fileInput" accept=".xlsx" style="display: none;">
+                        <button class="button" onclick="loadFile()">Load XLSX File</button>
+                        <button class="button" onclick="randomizeData()">Randomize</button>
+                        <button class="button" onclick="copyContent()">Copy Content to Competitor</button>
+                        <button id="exportButton" class="button">Create Log File</button>
+                        <!-- Add Reset button -->
+                        <button class="button" onclick="resetData()">Reset</button>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="announcementModalLabel">Announcement</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Add your announcement content here -->
+                        <div class="box">
+                            <!-- This is the box where announcements will be added -->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="announcementInput">Enter Announcement</label>
+                            <input type="text" class="form-control" id="announcementInput" name="announcementText">
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="addAnnouncement()" id="addAnnouncementButton">Add Announcement</button>
+                        <ul id="announcementList" class="list-group mt-3">
+                            <!-- List to display announcements -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>       
+        </div>
+      </div>
+      <!-- Include the footer and scripts from your previous code -->
+      <!-- ... (the footer and scripts code you provided) ... -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/exportxlsx.js"></script>
+      <script src="assets/js/tabs.js"></script>
+      <script src="assets/js/swiper.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script src="assets/js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+      
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
+
+      <!-- ... (rest of your scripts) ... -->
+      <script>
+         // Add your existing JavaScript code here
+         var interleaveOffset = 0.5;
+         
+         var swiperOptions = {
+         loop: true,
+         speed: 1000,
+         grabCursor: true,
+         watchSlidesProgress: true,
+         mousewheelControl: true,
+         keyboardControl: true,
+         navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev"
+         },
+         on: {
+           progress: function() {
+             var swiper = this;
+             for (var i = 0; i < swiper.slides.length; i++) {
+               var slideProgress = swiper.slides[i].progress;
+               var innerOffset = swiper.width * interleaveOffset;
+               var innerTranslate = slideProgress * innerOffset;
+               swiper.slides[i].querySelector(".slide-inner").style.transform =
+                 "translate3d(" + innerTranslate + "px, 0, 0)";
+             }      
+           },
+           touchStart: function() {
+             var swiper = this;
+             for (var i = 0; i < swiper.slides.length; i++) {
+               swiper.slides[i].style.transition = "";
+             }
+           },
+           setTransition: function(speed) {
+             var swiper = this;
+             for (var i = 0; i < swiper.slides.length; i++) {
+               swiper.slides[i].style.transition = speed + "ms";
+               swiper.slides[i].querySelector(".slide-inner").style.transition =
+                 speed + "ms";
+             }
+           }
+         }
+         };
+         
+         // Add this function to your JavaScript code
+function addAnnouncement() {
+    var announcementInput = document.getElementById("announcementInput");
+    var announcementText = announcementInput.value;
+    console.log("Announcement Text:", announcementText);
+
+    if (announcementText) {
+        var listItem = document.createElement("li");
+        listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+        
+        var announcementContent = document.createElement("span");
+        announcementContent.textContent = announcementText;
+        
+        var buttonGroup = document.createElement("div");
+        buttonGroup.className = "btn-group";
+
+        var editButton = document.createElement("button");
+        editButton.className = "btn btn-secondary btn-sm mx-1"; // Added mx-1 for margin
+        editButton.textContent = "Edit";
+        editButton.onclick = function() { editAnnouncement(listItem); };
+
+        var deleteButton = document.createElement("button");
+        deleteButton.className = "btn btn-danger btn-sm mx-1"; // Added mx-1 for margin
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function() { deleteAnnouncement(listItem); };
+
+        var updateButton = document.createElement("button");
+        updateButton.className = "btn btn-success btn-sm mx-1"; // Added mx-1 for margin
+        updateButton.textContent = "Update";
+        updateButton.onclick = function() { updateAnnouncement(listItem); };
+
+        buttonGroup.appendChild(editButton);
+        buttonGroup.appendChild(deleteButton);
+        buttonGroup.appendChild(updateButton);
+
+        listItem.appendChild(announcementContent);
+        listItem.appendChild(buttonGroup);
+
+        document.getElementById("announcementList").appendChild(listItem);
+
+        announcementInput.value = "";
+    }
+}
+
+// Modify your existing code to call this function when the "Add Announcement" button is clicked
+
+
+function editAnnouncement(item) {
+    var announcementContent = item.querySelector('span');
+    var announcementText = announcementContent.textContent;
+    document.getElementById("announcementInput").value = announcementText;
+    item.parentNode.removeChild(item);
+}
+
+function deleteAnnouncement(item) {
+    item.parentNode.removeChild(item);
+}
+
+function updateAnnouncement(item) {
+    var announcementText = document.getElementById("announcementInput").value;
+    if (announcementText) {
+        var announcementContent = item.querySelector('span');
+        announcementContent.textContent = announcementText;
+    }
+}
+
+
+         var swiper = new Swiper(".swiper-container", swiperOptions);
+         function randomizeData() {
+         var div1 = document.querySelector('.box'); // Get content of div1
+         var div2 = document.querySelectorAll('.box')[1]; // Get div2
+         
+         // Create a temporary div to parse the HTML content of div1
+         var tempDiv = document.createElement('div');
+         tempDiv.innerHTML = div1.innerHTML;
+         
+         // Extract the table from div1
+         var table = tempDiv.querySelector('table');
+         
+         // Extract all the rows except for the header row
+         var rows = Array.from(table.querySelectorAll('tr')).slice(2); // Exclude the first two rows
+         
+         // Extract the cells of each column into separate arrays
+         var columnsData = [];
+         var numColumns = rows[0].cells.length;
+         
+         for (var colIndex = 0; colIndex < numColumns; colIndex++) {
+         var columnData = [];
+         
+         for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+             var cell = rows[rowIndex].cells[colIndex];
+             columnData.push(cell.innerHTML.trim());
+         }
+         
+         columnsData.push(columnData);
+         }
+         
+         // Shuffle the data within each column independently
+         for (var colIndex = 0; colIndex < numColumns; colIndex++) {
+         shuffleArray(columnsData[colIndex]);
+         }
+         
+         // Create the randomized content for div2
+         var randomizedContent = '<table>';
+         
+         // Add the header row (fixed)
+         randomizedContent += table.querySelector('tr').outerHTML;
+         
+         // Add the first two rows (fixed)
+         randomizedContent += table.querySelectorAll('tr')[1].outerHTML;
+         
+         // Reconstruct the table with shuffled data
+         for (var rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+         randomizedContent += '<tr>';
+         
+         for (var colIndex = 0; colIndex < numColumns; colIndex++) {
+             randomizedContent += '<td>' + columnsData[colIndex][rowIndex] + '</td>';
+         }
+         
+         randomizedContent += '</tr>';
+         }
+         
+         randomizedContent += '</table>';
+         
+         // Set the content of div2 to the randomized table
+         div2.innerHTML = randomizedContent;
+         
+         var div2Content = div2.innerHTML;
+         localStorage.setItem('div2Content', div2Content);
+         }
+         
+         // Attach the click event handler to the "Randomize" button for div2 (Button 2)
+         document.querySelectorAll('.button')[1].addEventListener('click', randomizeData);
+         function openRandomizerModal() {
+             $('#randomizerModal').modal('show');
+         }
+         function openAnnouncementModal() {
+             $('#announcementModal').modal('show');
+         }
+         
+         function resetData() {
+         // Clear the content of div1
+         var div1 = document.querySelector('.box');
+         div1.innerHTML = '';
+         
+         // Clear the content of div2
+         var div2 = document.querySelectorAll('.box')[1];
+         div2.innerHTML = '';
+         
+         // Reset any other data or variables as needed
+         
+         // Clear the file input field
+         var fileInput = document.getElementById('fileInput');
+         fileInput.value = '';
+         }
+
+         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA0TYfWpEVg4LTtGPb8tUhMLKRIFdEzwrg",
+  authDomain: "ihsaproject.firebaseapp.com",
+  projectId: "ihsaproject",
+  storageBucket: "ihsaproject.appspot.com",
+  messagingSenderId: "454053242434",
+  appId: "1:454053242434:web:5d84ae1552be526cbbefdb",
+  measurementId: "G-XDEZJM450Q"
+};
+
+firebase.initializeApp(firebaseConfig);
+ 
+        var messagesRef = firebase.database()
+            .ref('Collected Data');
+         
+        document.getElementById('contactForm')
+            .addEventListener('submit', submitForm);
+ 
+        function submitForm(e) {
+            e.preventDefault();
+ 
+            // Get values
+            var name = getInputVal('name');
+            var email = getInputVal('email');
+ 
+            saveMessage(name, email);
+            document.getElementById('contactForm').reset();
+        }
+ 
+        // Function to get form values
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+ 
+        // Save message to firebase
+        function saveMessage(name, email) {
+            var newMessageRef = messagesRef.push();
+            newMessageRef.set({
+                name: name,
+                email: email,
+            });
+        }
+
+         
+      </script>
+   </body>
+</html>

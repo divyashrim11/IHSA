@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, shrink-to-fit=no"
+         />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+         />
+      <title>IHSA</title>
+      <link rel="icon" type="image/x-icon" href="assets/images/logo2.png" />
+      <script src="assets/js/horse.js"></script>
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+      <style>
+         #myHeader {
+         transition: transform 0.5s;
+         }
+         .header-hidden {
+         transform: translateY(-100%);
+         }
+         #logo {
+         transition: transform 0.5s;
+         }
+         .logo-hidden {
+         transform: translateY(-100%);
+         }
+         .nav li a {
+         color: #43BA7F; /* Set the default color of the menu items */ /* Remove any existing font-weight */
+         transition: color 0.3s; /* Add transition for smooth color change */
+         font-size: 16.5px !important;
+         transform: scale(1); /* Set the default scale */
+         transition: transform 0.3s;
+         font-style:normal;
+         font-weight: normal;
+         }
+         .colored-heading {
+         display: inline-block; /* Make it a block element */
+         margin: 0 auto; /* Center align the element */
+         white-space: nowrap; /* Prevent wrapping */
+         }
+         /* Increase the arrow size */
+         .slide-inner {
+         background: url(assets/images/slider1.png) no-repeat right / contain #000000;
+         }
+         navbar {
+         background-color: transparent !important;
+         }
+         .header-sticky {
+         background-color: transparent !important;
+         }
+         .nav li a:not(.login-button):hover {
+         transform: scale(1.1); /* Increase the scale on hover */
+         }
+         /* Add this CSS rule to style the login button */
+         .login-button {
+         font-weight: bold;
+         transform: scale(1); /* Set the default scale for the login button */
+         transition: transform 0.3s; /* Add transition for smooth effect */
+         }
+         /* Add this CSS rule to scale the login button on hover */
+         .login-button:hover {
+         transform: scale(1.1); /* Increase the scale on hover */
+         }
+         .page-heading {
+            background: url(assets/images/annoucements.png) no-repeat right / contain #000000;
+         }
+      </style>
+      <!-- Additional CSS Files -->
+      <link rel="stylesheet" href="assets/css/fontawesome.css" />
+      <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css" />
+      <link rel="stylesheet" href="assets/css/owl.css" />
+      <link rel="stylesheet" href="assets/css/animate.css" />
+      <link
+         rel="stylesheet"
+         href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+         />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-d5F6ti2evL6XKtIEf3lPhI5ObGLeFSL+7l3FbD+qCS1N/EzYnUQnt1SXlm6qt0TC" crossorigin="anonymous" />
+   </head>
+   <body>
+      <!-- ***** Header Area Start ***** -->
+      <header id = "myHeader" class="header-area header-sticky">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <nav class="main-nav">
+                     <!-- ***** Logo Start ***** -->
+                     <a href="index.html" class="logo" id="logo">
+                     <img src="assets/images/logo.png" alt="" class="header-logo" style="width: 150px; height: 300px">
+                     </a>
+                     <!-- ***** Logo End ***** -->
+                     <!-- ***** Menu Start ***** -->
+                     <ul class="nav">
+                        <li class="scroll-to-section"><a href="index.html" class="active"><strong>HOME</strong></a></li>
+                        <li class="scroll-to-section"><a href="announcement.html"><strong>ANNOUNCEMENT</strong></a></li>
+                        <li class="scroll-to-section"><a href="horses.html"><strong>HORSES</strong></a></li>
+                        <li class="scroll-to-section"><a href="riders.html"><strong>RIDERS</strong></a></li>
+                        <li class="has-sub">
+                           <a href="javascript:void(0)"><strong>EVENTS</strong></a>
+                           <ul class="sub-menu">
+                              <li><a href="randomizer.html"><strong>RANDOMIZER</strong></a></li>
+                              <li><a href="gallery.html"><strong>GALLERY</strong></a></li>
+                              <li><a href="maps.html"><strong>MAPS</strong></a></li>
+                           </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="competitor.html"><strong>COMPETITORS</strong></a></li>
+                        <li class="scroll-to-section"><a href="signin.html"><strong>LOGIN</strong></a></li>
+                     </ul>
+                     <a class='menu-trigger'>
+                     <span>Menu</span>
+                     </a>                    
+                     <!-- ***** Menu End ***** -->
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- ***** Header Area End ***** -->
+      <div class="page-heading" style="background-image:url(assets/images/slider1.png)">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="header-text">
+                     <h2>Meet Our Riders</h2>
+                     <div class="div-dec"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-12 service-bg-1" style="height: 50vh">
+               <div class="service-item">
+                  <!-- <i class="fas fa-horse"></i>-->
+                  <br />
+                  <h2 style="text-align: center">IHSA FEATURED RIDERS</h2>
+                  <br />
+                  <p>
+                     The IHSA is proud of its diverse and dynamic student membership.
+                     Close to 10,000 strong, our student riders hail from across the
+                     United States and Canada, and regardless of their financial
+                     status, gender or riding experience, they share the opportunity to
+                     participate in equestrian competition. Take a moment to learn
+                     about some of our incredible members.
+                  </p>
+                  <br />
+                  <h2 style="text-align: center">
+                     How do you become a featured rider?
+                  </h2>
+                  <br />
+                  <p>
+                     The IHSA is proud of its dynamic and diverse membership. Help us
+                     shine the spotlight on our members.Please consider submitting a
+                     profile by following the instructions in ourFeatured Horse and
+                     Rider Submission form and sending it, along with high-resolution
+                     photos (check out theIHSA Photography Guide), to
+                     media@ihsainc.com.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container1">
+         <div class="image1">
+            <img src="assets/images/natalie-ward-copy.jpeg" alt="Natalie Ward" />
+         </div>
+         <div class="content1">
+            <h2>Natalie Ward</h2>
+            <br />
+            <p>Oregon State University</p>
+            <br />
+            <p>
+               I'm a senior at Oregon State Universty in Zone 8 region 4. I’m from
+               Oregon City, Oregon but I live in Corvallis Oregon right now for
+               school. I'm majoring in biology and graduate in 2023. I ride in Level
+               II Horsemanship and Ranch Riding. Traveling and competing with my team
+               has been my favorite thing about IHSA! Plus riding some pretty amazing
+               horses. My IHSA team is so kind and supportive. I have gained so many
+               friendships and I really appreciate my team and the memories we have
+               created!
+            </p>
+         </div>
+      </div>
+      <div class="container2">
+         <div class="image1">
+            <img
+               src="assets/images/webrider-spotlight--marty-kacsh-2-copy.jpg"
+               alt="Marty"
+               />
+         </div>
+         <div class="content1">
+            <h2>Marty Kacsh</h2>
+            <br />
+            <p>West Texas A&M University</p>
+            <br />
+            <p>
+               I am a Junior animal science pre-vet major at West Texas A&M
+               University. Growing up, I had lots of experience working with horses
+               but never much in the show world. The opportunities that the IHSA
+               gives to students is extremely worthwhile. It has opened doors for me
+               that I didn’t think were possible before entering the collegiate show
+               world. The connections and friendships made are something that I will
+               take with me forever.
+            </p>
+         </div>
+      </div>
+      <div class="container1">
+         <div class="image3">
+            <img
+               src="assets/images/rebecca-kearns-ihsa-featured-rider.jpg"
+               alt="Rebecca Kearns"
+               />
+         </div>
+         <div class="content1">
+            <h2>Rebecca Kearns</h2>
+            <br />
+            <p>Rocky Mountain College</p>
+            <br />
+            <p>
+               Hello my name is Rebecca Kearns and I am an equestrian major at Rocky
+               Mountain College. When I began my search for colleges I knew that my
+               heart was set on horses and I wanted to compete. When I came for a
+               college tour I met all the equestrian trainers and professors and fell
+               in love with all of them. They all made me feel welcomed and supported
+               along with seeing my potential and knowing I can become the best rider
+               I can be. Rocky Mountain College is a smaller school which I also fell
+               in love with. I knew I wanted to create a relationship with my
+               trainers and professors rather than just be a number. Everyone in the
+               equestrian program makes me feel as if this is my second home.
+            </p>
+         </div>
+      </div>
+      <div class="container2">
+         <div class="image1">
+            <img
+               src="assets/images/serinah1c14ccbfb4366d6da3beff0000a185d7.jpg"
+               alt="Serinah Palafox"
+               />
+         </div>
+         <div class="content1">
+            <h2>Serinah Palafox</h2>
+            <br />
+            <p>Hartwick College</p>
+            <br />
+            <p>
+               Serinah Palafox is a member of the className of 2023 at Hartwick
+               College in Oneonta, New York. Serinah is from Staten Island and rode
+               on the MET IEA team with Jane DaCosta who encouraged and mentored her.
+               She earned a significant scholarship for her undergraduate studies.<br />
+               <br />
+               At Hartwick she continued riding on the IHSA team. Her first two years
+               of competition were sidelined because of COVID-19, but in 2022,
+               Serinah qualified for and competed at Regionals. <br /><br />
+               “Making it to Regional Finals was a dream come true,” Serinah said. “I
+               want to thank the IHSA for providing me the opportunity to continue my
+               riding career throughout my academic college career, for creating
+               countless memories with teammates, meeting new people in and out of
+               the saddle, and reconnecting with former IEA teammates while cheering
+               them on. My favorite part of IHSA is the family I found and all the
+               amazing horses I’ve learned from and come across. Without riding I
+               don’t think I’d be where I am today, so thank you!”
+            </p>
+         </div>
+      </div>
+      <div class="container1">
+         <div class="image1">
+            <img
+               src="assets/images/radha-shinde-headshot-(2).jpg"
+               alt="RADHA SHINDE"
+               />
+         </div>
+         <div class="content1">
+            <h2>RADHA SHINDE</h2>
+            <br />
+            <p>RUTGERS UNIVERSITY</p>
+            <br />
+            <p>
+               Radha Shinde is from Edison, N.J., majoring in Finance and Business
+               Analytics and Information Technology at Rutgers University. She will
+               graduate in May 2022. She competes in the Novice classNamees.
+               <br /><br />
+               “IHSA has given me a sense of leadership and community. Since freshman
+               year, I have been on my executive board, so I have been dedicated to
+               our team since the beginning. My favorite part of IHSA has been
+               meeting all the amazing riders that I now call my best friends and my
+               coach, Kelly Francfort that has helped me build confidence in the show
+               ring. I have learned a lot during my time on my team and I am forever
+               grateful."
+            </p>
+         </div>
+      </div>
+      <div class="container2">
+         <div class="image1">
+            <img src="assets/images/kaylee.jpg" alt="Marty" />
+         </div>
+         <div class="content1">
+            <h2>Kaylee Tingle</h2>
+            <br />
+            <p>West Texas A&M University</p>
+            <br />
+            <p>
+               I am a Junior animal science pre-vet major at West Texas A&M
+               University. Growing up, I had lots of experience working with horses
+               but never much in the show world. The opportunities that the IHSA
+               gives to students is extremely worthwhile. It has opened doors for me
+               that I didn’t think were possible before entering the collegiate show
+               world. The connections and friendships made are something that I will
+               take with me forever.
+            </p>
+         </div>
+      </div>
+      <div class="container1">
+         <div class="image1">
+            <img
+               src="assets/images/andrea-cao-standford-university-featured-rider.jpeg"
+               alt="ANDREA CAO"
+               />
+         </div>
+         <div class="content1">
+            <h2>ANDREA CAO</h2>
+            <br />
+            <p>Stanford University</p>
+            <br />
+            <p>
+               Andrea Cao is from San Luis Obispo, CA and rides on the Stanford
+               University Equestrian Team. She will graduate in 2024 and is still
+               deciding on a major.
+               <br /><b>How has IHSA enhanced your college experience?</b> <br />The
+               friendships and memories I’ve made with my team are seriously
+               unmatched!! I know I’ll not only confidently walk out of my college
+               experience with a truck load of memories and insane stories, but also
+               friendships that will last a lifetime. Those early mornings and long
+               drives really do become something special.
+               <br /><br /><b>How has IHSA enhanced your college experience?</b>
+               <br />The friendships and memories I’ve made with my team are
+               seriously unmatched!! I know I’ll not only confidently walk out of my
+               college experience with a truck load of memories and insane stories,
+               but also friendships that will last a lifetime. Those early mornings
+               and long drives really do become something special.
+               <br /><br />Also Fun Facts: Andrea appeared on Shark Tank and she is
+               now an entrepreneur with her own successful western tack company
+               AndreaEquine
+            </p>
+         </div>
+      </div>
+      <div class="container2">
+         <div class="image1">
+            <img src="assets/images/sarah.jpg" alt="SARAH CANDEE" />
+         </div>
+         <div class="content1">
+            <h2>SARAH CANDEE</h2>
+            <br />
+            <p>University of Wisconsin-Madison</p>
+            <br />
+            <p>
+               Sarah Candee rides on the the University of Wisconsin-Madison Hunter
+               Seat team and competes in the Limit Over Fences and Limit On the Flat
+               classes. She will graduate in Spring 2022 with a degree in Theatre &
+               Drama, Communication Art (TV-Radio-Film). She competes in the Limit
+               divisions.
+            </p>
+         </div>
+      </div>
+      <div class="container1">
+         <div class="image1">
+            <img src="assets/images/hannah-jones.png" alt="HANNAH JONES" />
+         </div>
+         <div class="content1">
+            <h2>HANNAH JONES</h2>
+            <br />
+            <p>Hollins University</p>
+            <br />
+            <p>
+               Hannah Jones is from New Castle, Pennsylvania, and competes on the
+               Hollins University team in the Novice division. A member of the class
+               of 2022, she is majoring in biology with a chemistry minor.
+               <br /><br />
+               “I love being able to ride all kinds of really well-trained horses and
+               being able to show them in an environment that encourages the growth
+               of all levels of rider.
+               <br /><br />
+               “Being a part of a team has introduced me to a new community of
+               like-minded people from all over the country that have become some of
+               my closest friends. Together we support each other and bond over our
+               shared love of horses.”
+            </p>
+         </div>
+      </div>
+      </section>
+      <section class="services" id="services">
+         <div class = "container-fluid">
+            <div class="slick-prev slick-arrow" aria-label="Previous" style="color: black;">
+               <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="slick-gallery" data-slick='{"slidesToShow": 5, "slidesToScroll": 5, "infinite": true, "autoplay": true}'>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://practicalhorsemanmag.com/">
+                     <img src="assets/images/sponsor1.png" alt="Sponsor 1" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.ushja.org/content/news/news_media2.aspx">
+                     <img src="assets/images/sponsor2.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="http://www.cha-ahse.org/">
+                     <img src="assets/images/sponsor3.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://showyeda.com/">
+                     <img src="assets/images/sponsor4.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.hodgesbadge.com/">
+                     <img src="assets/images/sponsor5.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://samshieldamerica.com/">
+                     <img src="assets/images/sponsor6.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.ringsidepro.com/">
+                     <img src="assets/images/sponsor7.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://aqha.com/">
+                     <img src="assets/images/sponsor8.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.smartpakequine.com/content/IHSA-Discount">
+                     <img src="assets/images/sponsor9.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.alumnitoc.com/">
+                     <img src="assets/images/sponsor10.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.bobscustomsaddles.com/">
+                     <img src="assets/images/sponsor11.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.athleticequestrian.com/">
+                     <img src="assets/images/sponsor12.png" alt="Sponsor 1" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://equiparent.com/">
+                     <img src="assets/images/sponsor13.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.facebook.com/Tingwick-Farm-134594370442819/">
+                     <img src="assets/images/sponsor14.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://apha.com/">
+                     <img src="assets/images/sponsor15.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://horseandcountry.tv/en-us">
+                     <img src="assets/images/sponsor16.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://equusfoundation.org/">
+                     <img src="assets/images/sponsor17.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.weridetogether.today/">
+                     <img src="assets/images/sponsor18.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.heliteus.com/">
+                     <img src="assets/images/sponsor19.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://backontrackusa.com/">
+                     <img src="assets/images/sponsor20.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.lmboots.com/">
+                     <img src="assets/images/sponsor21.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://ecogold.ca/">
+                     <img src="assets/images/sponsor22.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.equinenetwork.com/">
+                     <img src="assets/images/sponsor23.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.theplaidhorse.com/">
+                     <img src="assets/images/sponsor24.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.nrha.com/">
+                     <img src="assets/images/sponsor25.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.equisure-inc.com/">
+                     <img src="assets/images/sponsor26.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://riderzon.com/products/fabbri-next-one-tall-boots">
+                     <img src="assets/images/sponsor27.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="http://www.rjclassics.com/">
+                     <img src="assets/images/sponsor28.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.equestrianteamapparel.com/">
+                     <img src="assets/images/sponsor29.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://gallagherswater.com/">
+                     <img src="assets/images/sponsor30.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://horseandrider.com/">
+                     <img src="assets/images/sponsor31.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://perfectproductseq.com/">
+                     <img src="assets/images/sponsor32.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.rods.com/">
+                     <img src="assets/images/sponsor33.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://north-america.cwdsellier.com/en/">
+                     <img src="assets/images/sponsor34.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.ntra.com/equinediscounts/">
+                     <img src="assets/images/sponsor35.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://veltrisport.com/">
+                     <img src="assets/images/sponsor36.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://hydrofera.com/vetblue/">
+                     <img src="assets/images/sponsor37.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="http://www.equiinstyle.com/">
+                     <img src="assets/images/sponsor38.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.chronofhorse.com/">
+                     <img src="assets/images/sponsor39.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://ippos.com/">
+                     <img src="assets/images/sponsor40.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.perrisleather.com//">
+                     <img src="assets/images/sponsor41.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://samshieldamerica.com/">
+                     <img src="assets/images/sponsor42.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br>
+      <br>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <p>Copyright © 2023 <a title="CSS Templates" rel="sponsored" href="https://www.ihsainc.com/home" target="_blank">IHSA</a> , Ltd. All Rights Reserved. 
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/tabs.js"></script>
+      <script src="assets/js/swiper.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script>
+         var interleaveOffset = 0.5;
+         
+         var swiperOptions = {
+           loop: true,
+           speed: 1000,
+           grabCursor: true,
+           watchSlidesProgress: true,
+           mousewheelControl: true,
+           keyboardControl: true,
+           navigation: {
+             nextEl: ".swiper-button-next",
+             prevEl: ".swiper-button-prev",
+           },
+           on: {
+             progress: function () {
+               var swiper = this;
+               for (var i = 0; i < swiper.slides.length; i++) {
+                 var slideProgress = swiper.slides[i].progress;
+                 var innerOffset = swiper.width * interleaveOffset;
+                 var innerTranslate = slideProgress * innerOffset;
+                 swiper.slides[i].querySelector(".slide-inner").style.transform =
+                   "translate3d(" + innerTranslate + "px, 0, 0)";
+               }
+             },
+             touchStart: function () {
+               var swiper = this;
+               for (var i = 0; i < swiper.slides.length; i++) {
+                 swiper.slides[i].style.transition = "";
+               }
+             },
+             setTransition: function (speed) {
+               var swiper = this;
+               for (var i = 0; i < swiper.slides.length; i++) {
+                 swiper.slides[i].style.transition = speed + "ms";
+                 swiper.slides[i].querySelector(".slide-inner").style.transition =
+                   speed + "ms";
+               }
+             },
+           },
+         };
+         
+         var swiper = new Swiper(".swiper-container", swiperOptions);
+         window.addEventListener("scroll", function () {
+           var header = document.getElementById("myHeader");
+           var logo = document.getElementById("logo");
+           if (window.scrollY > 0) {
+             header.classList.add("header-hidden");
+             logo.classList.add("logo-hidden");
+           } else {
+             header.classList.remove("header-hidden");
+             logo.classList.remove("logo-hidden");
+           }
+         });
+         $(document).ready(function(){
+            $('.slick-gallery').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000, // Set the speed in milliseconds (here it's set to 3 seconds)
+            });
+            });
+      </script>
+   </body>
+</html>

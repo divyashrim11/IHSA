@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      <title>IHSA</title>
+      <link rel="icon" type="image/x-icon" href="assets/images/logo2.png">
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+         #myHeader {
+         transition: transform 0.5s;
+         }
+         .header-hidden {
+         transform: translateY(-100%);
+         }
+         #logo {
+         transition: transform 0.5s;
+         }
+         .logo-hidden {
+         transform: translateY(-100%);
+         }
+         .nav li a {
+         color: #fffF; /* Set the default color of the menu items */ /* Remove any existing font-weight */
+         transition: color 0.3s; /* Add transition for smooth color change */
+         font-size: 16.5px !important;
+         transform: scale(1); /* Set the default scale */
+         transition: transform 0.3s;
+         font-style:normal;
+         font-weight: normal;
+         }
+         .colored-heading {
+         display: inline-block; /* Make it a block element */
+         margin: 0 auto; /* Center align the element */
+         white-space: nowrap; /* Prevent wrapping */
+         }
+         /* Increase the arrow size */
+         .slide-inner {
+         background: url(assets/images/slider1.png) no-repeat right / contain #000000;
+         }
+         .navbar {
+   background-color: transparent !important;
+}
+
+.header-sticky {
+   background-color: transparent !important;
+}
+         .nav li a:not(.login-button):hover {
+         transform: scale(1.1); /* Increase the scale on hover */
+         }
+         /* Add this CSS rule to style the login button */
+         .login-button {
+         font-weight: bold;
+         transform: scale(1); /* Set the default scale for the login button */
+         transition: transform 0.3s; /* Add transition for smooth effect */
+         }
+         /* Add this CSS rule to scale the login button on hover */
+         .login-button:hover {
+         transform: scale(1.1); /* Increase the scale on hover */
+         }
+         .nav li a:hover {
+  color: #43BA7F !important; /* Set the color to green when hovered */
+  font-weight: bold; /* Make the text bold when hovered */
+}
+.nav li.active a {
+  color: #43BA7F !important; /* Set the color to green for the active item */
+}
+.service-item img {
+      height: 300px; /* Set a fixed height for the images */
+      border-radius: 15px; /* Add curved borders */
+      object-fit: cover; /* Ensure the image covers the entire container */
+   }
+   .page-heading {
+            background: url(assets/images/annoucements.png) no-repeat right / contain #000000;
+         }
+         section.services {
+    margin-bottom: 20px; /* Add margin to the bottom of each section */
+}
+.section-margin {
+    margin-bottom: 20px; /* Adjust this value as needed for the desired space */
+  }
+      </style>
+      <!-- Additional CSS Files -->
+      <link rel="stylesheet" href="assets/css/fontawesome.css">
+      <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+      <link rel="stylesheet" href="assets/css/owl.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-d5F6ti2evL6XKtIEf3lPhI5ObGLeFSL+7l3FbD+qCS1N/EzYnUQnt1SXlm6qt0TC" crossorigin="anonymous" />
+   </head>
+   <body>
+      <!-- ***** Header Area Start ***** -->
+      <header id = "myHeader" class="header-area header-sticky">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <nav class="main-nav">
+                     <!-- ***** Logo Start ***** -->
+                     <a href="index.html" class="logo" id="logo">
+                     <img src="assets/images/logo.png" alt="" class="header-logo" style="width: 150px; height: 300px">
+                     </a>
+                     <!-- ***** Logo End ***** -->
+                     <!-- ***** Menu Start ***** -->
+                     <ul class="nav">
+                        <li class="scroll-to-section"><a href="index.html"><strong>HOME</strong></a></li>
+                        <li class="scroll-to-section"><a href="announcement.html"><strong>ANNOUNCEMENT</strong></a></li>
+                        <li class="scroll-to-section"><a href="horses.html"><strong>HORSES</strong></a></li>
+                        <li class="scroll-to-section"><a href="riders.html"><strong>RIDERS</strong></a></li>
+                        <li class="has-sub">
+                           <a href="javascript:void(0)"><strong>EVENTS</strong></a>
+                           <ul class="sub-menu">
+                              <li><a href="randomizer.html"><strong>RANDOMIZER</strong></a></li>
+                              <li><a href="gallery.html"><strong>GALLERY</strong></a></li>
+                              <li><a href="maps.html"><strong>MAPS</strong></a></li>
+                           </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="competitor.html"><strong>COMPETITORS</strong></a></li>
+                        <li class="scroll-to-section"><a href="signin.html" class="login-button"><strong>LOGIN</strong></a></li>
+                     </ul>
+                     <a class='menu-trigger'>
+                     <span>Menu</span>
+                     </a>                    
+                     <!-- ***** Menu End ***** -->
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      <br>
+      <br>
+      <!-- ***** Header Area End ***** -->
+      <!-- ***** Main Banner Area Start ***** -->
+      <div class="page-heading" style="background-image:url(assets/images/annoucements.png)">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="header-text">
+                     <h2>Meet our Horses</h2>
+                     <div class="div-dec"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <br>
+      <!-- ***** Main Banner Area End ***** -->
+      <section class="services section-margin" id="services" style="margin: 0; padding: 0;">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 service-bg-1" style="height: auto; color: rgb(106, 2, 2); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                  <div class="service-item">
+                     <div class="row align-items-center" style="margin: 0;">
+                        <div class="col-md-6" style="padding: 0;">
+                           <img src="assets/images/h1.jpg" alt="Image Description" style="width: 100%; max-width: 500px; height: auto; margin-top: 20px;">
+                        </div>
+                        <div class="col-md-6" style="padding: 0;">
+                           <h2 style="margin: 0;">CARL</h2>
+                           <br>
+                           <h3 style="margin: 0;">United States Military Academy at West Point Warmblood</h3>
+                           <br>
+                           <h3 style="margin: 0;">USMA West Point</h3>
+                           <br>
+                           <h5 style="margin: 0;">May 2023</h5>
+                           <br>
+                           <p style="margin: 0;">
+                              Cardenfe, aka Carl, came to the United States Military Academy in the summer of 2022. He is a big bay warmblood gelding standing at 17.2h. He was donated to the Cadet Equestrian Team by Moriah Bluman who was confident that the academy would be a good fit for Carl.
+                           </p>
+                           <p style="margin: 0;">And how right she was! Carl warmed our hearts from day one. His barn manners are perfect, even though he manages to get more hay outside of his stall then in it. He prefers the more advanced rider but is tolerant of the novice one.</p>
+                           <p style="margin: 0;">Carl’s background is quite extensive. He has done the U25 (1.45) level winning many classes. He has jumped successfully in Europe, WEF in Wellington, Tryon, Kentucky and Michigan to name a few. He has guided riders from the low amateur jumpers (1.25) up through the levels to U25 for over 10 years. Now at 18, his job at the academy is much lighter and more suitable for this very special boy.</p>
+                           <p style="margin: 0;">Carl has competed at the Zone 3 Regional Championship, thus proving him a worthy national competitor the Nationals 2023 in Kentucky. He has proved to be a favorite to the Army Equestrian Team as well as the other riders in our region.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>    
+      <br>
+      <br>
+      <section class="services section-margin" id="services" style="margin: 0; padding: 0;">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 service-bg-1" style="height: auto; color: rgb(106, 2, 2); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                  <div class="service-item">
+                     <div class="row align-items-center" style="margin: 0;">
+                        <div class="col-md-6" style="padding: 0;">
+                           <h2 style="margin: 0;">EASTERS LIL CHIC</h2>
+                           <br>
+                           <h3 style="margin: 0;">American Quarter Horse</h3>
+                           <br>
+                           <h3 style="margin: 0;">Mississippi State University</h3>
+                           <br>
+                           <h5 style="margin: 0;">January 2023</h5>
+                           <br>
+                           <p style="margin: 0;">
+                              Easters Lil Chic, aka Mo, was purchased by Mississippi State University in the spring of 2016 as a 2-year-old show prospect and for its breeding program. Easters Lil Chic is by AQHA Versatility Ranch Horse World Champion, Lil Ruf Catalyst, out of Smart Easter Chic.  Mo excelled in Ranch Riding, qualifying for the AQHA World Show in a single weekend, her first year of showing. She then transitioned into a dynamite equestrian team horse and broodmare. Producing foals by Zezes Pepto Cat, Metallic Rebel, and two foals on the way by Cowpuncher Cadillac. Mo has elevated the Mississippi State University breeding program to the next level.                           </p>
+                           <p style="margin: 0;">Mo’s greatest strength is her ability perform as a member of the equestrian team. Whether it's reining, ranch riding, horsemanship or equitation on the flat, Mo is a competition favorite and has won nearly every class she’s been shown in. She’s also participated in camps, pony rides and extension activities. Mo is physically talented with a great mind and is a wonderful teacher. </p>
+                           <p style="margin: 0;">You can catch Mo in action at the 2023 Western Semi-Finals hosted by Mississippi State University.</p>
+                        </div>
+                        <div class="col-md-6" style="padding: 0; display: flex; justify-content: center; align-items: center;">
+                           <img src="assets/images/h2.jpg" alt="Image Description" style="width: 80%; max-width: 600px; height: auto; margin-top: 20px; object-fit: cover;">
+                       </div>                    
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br>
+      <br>
+      <section class="services section-margin" id="services" style="margin: 0; padding: 0;">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 service-bg-1" style="height: auto; color: rgb(106, 2, 2); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                  <div class="service-item">
+                     <div class="row align-items-center" style="margin: 0;">
+                        <div class="col-md-6" style="padding: 0;">
+                           <img src="assets/images/h3.jpg" alt="Image Description" style="width: 100%; max-width: 500px; height: auto; margin-top: 20px;">
+                        </div>
+                        <div class="col-md-6" style="padding: 0;">
+                           <h2 style="margin: 0;">WONDERFUL TONIGHT</h2>
+                           <br>
+                           <h3 style="margin: 0;">Commonwealth Farm Warmblood</h3>
+                           <br>
+                           <h3 style="margin: 0;">University of Illinois</h3>
+                           <br>
+                           <h5 style="margin: 0;">October 2022</h5>
+                           <br>
+                           <p style="margin: 0;">
+                              “Layla” is a 19-year-old warmblood mare who has been part of the University of Illinois IHSA  family since 2008. Layla started her time with us as a hunter prospect. At first, she was a bit of a handful but has settled in and become a forever resident.                          
+                            </p>
+                           <p style="margin: 0;">
+                              Layla believes herself to be a princess, but in her years here has proven to be a workhorse. She can teach all levels from Introductory to Open. She is quiet and safe. She can make a student work hard to get perfection. She has taught many young riders that if she is not asked properly and politely all they will get is mediocrity. She is really like riding a big, beautiful pony. 
+                            </p>
+                           <p style="margin: 0;">
+                              Layla can be seen routinely at the Zone VII Region I horse shows as well as IEA shows in our area.                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>    
+      <br>
+      <br>
+      <section class="services section-margin" id="services" style="margin: 0; padding: 0;">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-12 service-bg-1" style="height: auto; color: rgb(106, 2, 2); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                  <div class="service-item">
+                     <div class="row align-items-center" style="margin: 0;">
+                        <div class="col-md-6" style="padding: 0;">
+                           <h2 style="margin: 0;">INVESTERS NORFLEET</h2>
+                           <br>
+                           <h3 style="margin: 0;">Kelsey Keathly Paint</h3>
+                           <br>
+                           <h3 style="margin: 0;">Albion College</h3>
+                           <br>
+                           <h5 style="margin: 0;">March 2022</h5>
+                           <br>
+                           <p style="margin: 0;">
+                              Investers Norfleet (a.k.a "Norman") came to Albion College in July 2018 to join the Albion Western herd. He quickly warmed the hearts of his students and became a fan favorite throughout the region. Norman is shown in the Beginner Western Horsemanship level through Open Western Horsemanship, Level II Ranch Riding and has made several appearances in Hunt Seat shows hosted by Albion! He also supported some IHSA horse shows for Cazenovia College in Cazenovia, NY before moving to Michigan!                           </p>
+                           <p style="margin: 0;">Prior to retiring from his show career to become a "college professor", Norman earned hundreds of points showing in Youth, Amateur and Open all-around events in the American Paint Horse Association (APHA) and Pinto Horse Association (PtHA). In 2017, Norman earned two Reserve Champion awards at the PtHA Color Breed Congress (Tulsa, OK) in Open Ranch Riding and Ranch Trail, as well as finishing 6th nationally in the APHA Senior Ranch Riding. </p>
+                           <p style="margin: 0;"> 
+                              Norman is described as a school horse saint who is beloved by IHSA students and coaches alike. He has made a strong impact on many student-athletes and has continually offered those great first experiences for a countless number of individuals. In fact, at the 2022 IHSA Western Semi Finals in Galva, IL, he was awarded the Horse of the Show for his contribution to the show!  </p>
+                        </div>
+                     </div>
+                        <div class="col-md-6" style="padding: 0; display: flex; justify-content: center; align-items: center;">
+                           <img src="assets/images/h4.jpg" alt="Image Description" style="width: 80%; max-width: 600px; height: auto; margin-top: 20px; object-fit: cover;">
+                       </div>                    
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br>
+      <br>
+      <section class="services" id="services">
+         <div class = "container-fluid">
+            <div class="slick-gallery" data-slick='{"slidesToShow": 5, "slidesToScroll": 5, "infinite": true, "autoplay": true}'>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://practicalhorsemanmag.com/">
+                     <img src="assets/images/sponsor1.png" alt="Sponsor 1" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.ushja.org/content/news/news_media2.aspx">
+                     <img src="assets/images/sponsor2.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="http://www.cha-ahse.org/">
+                     <img src="assets/images/sponsor3.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://showyeda.com/">
+                     <img src="assets/images/sponsor4.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.hodgesbadge.com/">
+                     <img src="assets/images/sponsor5.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://samshieldamerica.com/">
+                     <img src="assets/images/sponsor6.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.ringsidepro.com/">
+                     <img src="assets/images/sponsor7.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://aqha.com/">
+                     <img src="assets/images/sponsor8.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.smartpakequine.com/content/IHSA-Discount">
+                     <img src="assets/images/sponsor9.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.alumnitoc.com/">
+                     <img src="assets/images/sponsor10.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.bobscustomsaddles.com/">
+                     <img src="assets/images/sponsor11.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.athleticequestrian.com/">
+                     <img src="assets/images/sponsor12.png" alt="Sponsor 1" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://equiparent.com/">
+                     <img src="assets/images/sponsor13.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.facebook.com/Tingwick-Farm-134594370442819/">
+                     <img src="assets/images/sponsor14.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://apha.com/">
+                     <img src="assets/images/sponsor15.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://horseandcountry.tv/en-us">
+                     <img src="assets/images/sponsor16.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://equusfoundation.org/">
+                     <img src="assets/images/sponsor17.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.weridetogether.today/">
+                     <img src="assets/images/sponsor18.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.heliteus.com/">
+                     <img src="assets/images/sponsor19.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://backontrackusa.com/">
+                     <img src="assets/images/sponsor20.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.lmboots.com/">
+                     <img src="assets/images/sponsor21.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://ecogold.ca/">
+                     <img src="assets/images/sponsor22.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.equinenetwork.com/">
+                     <img src="assets/images/sponsor23.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.theplaidhorse.com/">
+                     <img src="assets/images/sponsor24.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.nrha.com/">
+                     <img src="assets/images/sponsor25.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.equisure-inc.com/">
+                     <img src="assets/images/sponsor26.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://riderzon.com/products/fabbri-next-one-tall-boots">
+                     <img src="assets/images/sponsor27.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="http://www.rjclassics.com/">
+                     <img src="assets/images/sponsor28.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.equestrianteamapparel.com/">
+                     <img src="assets/images/sponsor29.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://gallagherswater.com/">
+                     <img src="assets/images/sponsor30.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://horseandrider.com/">
+                     <img src="assets/images/sponsor31.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://perfectproductseq.com/">
+                     <img src="assets/images/sponsor32.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.rods.com/">
+                     <img src="assets/images/sponsor33.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://north-america.cwdsellier.com/en/">
+                     <img src="assets/images/sponsor34.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.ntra.com/equinediscounts/">
+                     <img src="assets/images/sponsor35.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://veltrisport.com/">
+                     <img src="assets/images/sponsor36.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://hydrofera.com/vetblue/">
+                     <img src="assets/images/sponsor37.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="http://www.equiinstyle.com/">
+                     <img src="assets/images/sponsor38.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.chronofhorse.com/">
+                     <img src="assets/images/sponsor39.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://ippos.com/">
+                     <img src="assets/images/sponsor40.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://www.perrisleather.com//">
+                     <img src="assets/images/sponsor41.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="center-slick-content">
+                     <a href="https://samshieldamerica.com/">
+                     <img src="assets/images/sponsor42.png" alt="Practical Horseman" />
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br>
+      <br>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <p>Copyright © 2023 <a title="CSS Templates" rel="sponsored" href="https://www.ihsainc.com/home" target="_blank">IHSA</a> , Ltd. All Rights Reserved. 
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/tabs.js"></script>
+      <script src="assets/js/swiper.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+         var swiper = new Swiper('#top', {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                  navigation: {
+                     nextEl: '.swiper-button-next',
+                     prevEl: '.swiper-button-prev',
+                  },
+                  loop: true,
+                  autoplay: {
+                     delay: 5000,
+                  },
+               });
+                  
+                  
+                  window.addEventListener('scroll', function() {
+                      var header = document.getElementById('myHeader');
+                      var logo = document.getElementById('logo');
+                      if (window.scrollY > 0) {
+                          header.classList.add('header-hidden');
+                          logo.classList.add('logo-hidden');
+                      } else {
+                          header.classList.remove('header-hidden');
+                          logo.classList.remove('logo-hidden');
+                      }
+                  });
+                  $(document).ready(function(){
+             $('.slick-gallery').slick({
+                 slidesToShow: 5,
+                 slidesToScroll: 5,
+                 infinite: true,
+                 autoplay: true,
+                 autoplaySpeed: 3000,
+             });
+         });
+         
+                  
+                  
+               
+      </script>
+   </body>
+</html>
